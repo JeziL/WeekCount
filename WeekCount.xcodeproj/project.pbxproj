@@ -40,6 +40,8 @@
 		491F81E21D0ECFB0008B29EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		491F81E81D0ED14A008B29EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
 		491F81E91D0ED15D008B29EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PreferencesWindow.strings"; sourceTree = "<group>"; };
+		491F81EA1D0ED274008B29EC /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/PreferencesWindow.strings"; sourceTree = "<group>"; };
+		491F81EB1D0ED274008B29EC /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		4924D5C71D0E5ED1005BFF74 /* WeekCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4924D5CA1D0E5ED1005BFF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4924D5CC1D0E5ED1005BFF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -309,6 +311,7 @@
 			children = (
 				491F81E81D0ED14A008B29EC /* Base */,
 				491F81E91D0ED15D008B29EC /* zh-Hans */,
+				491F81EA1D0ED274008B29EC /* zh-Hant */,
 			);
 			name = PreferencesWindow.xib;
 			path = ..;
@@ -319,6 +322,7 @@
 			children = (
 				4924D5CF1D0E5ED2005BFF74 /* Base */,
 				491F81E21D0ECFB0008B29EC /* zh-Hans */,
+				491F81EB1D0ED274008B29EC /* zh-Hant */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";

@@ -25,7 +25,7 @@
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="109" y="235.5"/>
+            <point key="canvasLocation" x="218" y="353.5"/>
         </menu>
         <customObject id="E7w-E4-qkh" userLabel="StatusMenuController" customClass="StatusMenuController" customModule="WeekCount" customModuleProvider="target">
             <connections>
