@@ -87,7 +87,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
             let rawStr = displayFormat.stringByReplacingOccurrencesOfString("{W}", withString: String(count))
             return NSAttributedString.init(string: rawStr, attributes: [NSFontAttributeName: font])
         } else {
-            return NSAttributedString.init(string: "", attributes: [NSFontAttributeName: font])
+            return NSAttributedString.init(string: "WeekCount", attributes: [NSFontAttributeName: font])
         }
     }
 }
