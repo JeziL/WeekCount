@@ -61,7 +61,17 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     func updateDisplay() {
         if let button = statusItem.button {
-            button.title = String(sem.getWeekNo())
+            button.attributedTitle = showWeekCount(sem.getWeekNo())
+        }
+    }
+    
+    func showWeekCount(count: Int) -> NSAttributedString {
+        let font = NSFont.systemFontOfSize(14.25)
+        if count > 0 {
+            let rawStr = displayFormat.stringByReplacingOccurrencesOfString("{W}", withString: String(count))
+            return NSAttributedString.init(string: rawStr, attributes: [NSFontAttributeName: font])
+        } else {
+            return NSAttributedString.init(string: "", attributes: [NSFontAttributeName: font])
         }
     }
 }
