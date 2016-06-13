@@ -6,6 +6,8 @@
 
 第一个 Swift 项目，写了两句代码，做了一点微小的工作，向今晚的 WWDC 2016 献礼。
 
+[最新版下载](https://raw.githubusercontent.com/JeziL/WeekCount/master/releases/WeekCount_latest.zip)
+
 ##设置
 
 ![Preferences](assets/preferences.png)
