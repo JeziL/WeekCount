@@ -35,8 +35,9 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         
         //NSUserDefaults.standardUserDefaults().setPersistentDomain(["":""], forName: NSBundle.mainBundle().bundleIdentifier!)
         
-        updatePreferences()
-        updateDisplay()
+        let timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateAll"), userInfo: nil, repeats: true)
+        let loop = NSRunLoop.mainRunLoop()
+        loop.addTimer(timer, forMode: NSDefaultRunLoopMode)
         
         statusMenu.itemArray.last!.action = Selector("terminate:")
         statusItem.menu = statusMenu
@@ -45,6 +46,11 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     @IBAction func showPreferencesWindow(sender: NSMenuItem) {
         preferencesWindow.showWindow(nil)
+    }
+    
+    func updateAll() {
+        updatePreferences()
+        updateDisplay()
     }
     
     func preferencesDidUpdate() {
