@@ -15,8 +15,7 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="NPF-LY-g2a">
             <items>
-                <menuItem title="Preferences..." id="taV-NT-8KD">
-                    <modifierMask key="keyEquivalentModifierMask"/>
+                <menuItem title="Preferences..." keyEquivalent="," id="taV-NT-8KD">
                     <connections>
                         <action selector="showPreferencesWindow:" target="E7w-E4-qkh" id="BqD-Wj-ZLN"/>
                     </connections>
