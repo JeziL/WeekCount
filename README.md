@@ -1,5 +1,7 @@
 # WeekCount
 
+[![Build Status](https://travis-ci.org/JeziL/WeekCount.svg?branch=master)](https://travis-ci.org/JeziL/WeekCount)
+
 ![Screenshot](assets/screenshot.png)
 
 终于不用再说出「第几周了？！」这个愚蠢的问题。
