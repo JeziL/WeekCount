@@ -23,6 +23,8 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     var displayFormat: String!
     var autoLaunch: Int!
     
+    var sem: Semester!
+    
     let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
     
     override func awakeFromNib() {
@@ -31,7 +33,6 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         preferencesWindow.delegate = self
         
         updatePreferences()
-        
         updateDisplay()
         
         statusMenu.itemArray.last!.action = Selector("terminate:")
@@ -54,11 +55,13 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         lastCount = Int(defaults.stringForKey("lastCount")!) ?? DEFAULT_LASTCOUNT
         displayFormat = defaults.stringForKey("displayFormat") ?? DEFAULT_DISPLAYFORMAT
         autoLaunch = defaults.valueForKey("autoLaunch") as? Int ?? DEFAULT_AUTOLAUNCH
+        
+        sem = Semester.init(startDate: startDate, lastCount: lastCount)
     }
     
     func updateDisplay() {
         if let button = statusItem.button {
-            button.title = displayFormat
+            button.title = String(sem.getWeekNo())
         }
     }
 }
