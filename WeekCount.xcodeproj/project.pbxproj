@@ -15,7 +15,7 @@
 		4924D5DB1D0E5ED2005BFF74 /* WeekCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5DA1D0E5ED2005BFF74 /* WeekCountTests.swift */; };
 		4924D5E61D0E5ED2005BFF74 /* WeekCountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5E51D0E5ED2005BFF74 /* WeekCountUITests.swift */; };
 		4924D5F41D0E6841005BFF74 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */; };
-		499DD0E71D0E717E00A9CB00 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DD0E51D0E717E00A9CB00 /* PreferencesWindow.swift */; };
+		49A16E061D0EEE9D00BCE22D /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A16E051D0EEE9D00BCE22D /* PreferencesWindow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,7 @@
 		4924D5E51D0E5ED2005BFF74 /* WeekCountUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCountUITests.swift; sourceTree = "<group>"; };
 		4924D5E71D0E5ED2005BFF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
-		499DD0E51D0E717E00A9CB00 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesWindow.swift; path = ../PreferencesWindow.swift; sourceTree = "<group>"; };
+		49A16E051D0EEE9D00BCE22D /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +107,7 @@
 			children = (
 				4924D5CA1D0E5ED1005BFF74 /* AppDelegate.swift */,
 				4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */,
-				499DD0E51D0E717E00A9CB00 /* PreferencesWindow.swift */,
+				49A16E051D0EEE9D00BCE22D /* PreferencesWindow.swift */,
 				491F81DA1D0E970D008B29EC /* Semester.swift */,
 				4924D5CC1D0E5ED1005BFF74 /* Assets.xcassets */,
 				491F81E51D0ED114008B29EC /* PreferencesWindow.xib */,
@@ -268,8 +268,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4924D5F41D0E6841005BFF74 /* StatusMenuController.swift in Sources */,
+				49A16E061D0EEE9D00BCE22D /* PreferencesWindow.swift in Sources */,
 				491F81DB1D0E970D008B29EC /* Semester.swift in Sources */,
-				499DD0E71D0E717E00A9CB00 /* PreferencesWindow.swift in Sources */,
 				4924D5CB1D0E5ED1005BFF74 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
