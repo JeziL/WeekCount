@@ -37,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		491F81DA1D0E970D008B29EC /* Semester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
+		491F81E21D0ECFB0008B29EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		4924D5C71D0E5ED1005BFF74 /* WeekCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4924D5CA1D0E5ED1005BFF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4924D5CC1D0E5ED1005BFF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -306,6 +307,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				4924D5CF1D0E5ED2005BFF74 /* Base */,
+				491F81E21D0ECFB0008B29EC /* zh-Hans */,
 			);
 			name = MainMenu.xib;
 			sourceTree = "<group>";
