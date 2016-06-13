@@ -203,7 +203,7 @@
 				TargetAttributes = {
 					4924D5C61D0E5ED1005BFF74 = {
 						CreatedOnToolsVersion = 7.2;
-						DevelopmentTeam = 5KK7XTP6QX;
+						DevelopmentTeam = 7X9UFZRCPT;
 					};
 					4924D5D51D0E5ED2005BFF74 = {
 						CreatedOnToolsVersion = 7.2;
@@ -414,7 +414,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application: Jinli Wang (7X9UFZRCPT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: Jinli Wang (7X9UFZRCPT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = WeekCount/Info.plist;
@@ -430,7 +430,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "Developer ID Application: Jinli Wang (7X9UFZRCPT)";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: Jinli Wang (7X9UFZRCPT)";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = WeekCount/Info.plist;
