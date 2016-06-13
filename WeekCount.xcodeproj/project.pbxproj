@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		491F81DB1D0E970D008B29EC /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491F81DA1D0E970D008B29EC /* Semester.swift */; };
+		491F81E31D0ED114008B29EC /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491F81E51D0ED114008B29EC /* PreferencesWindow.xib */; };
 		4924D5CB1D0E5ED1005BFF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5CA1D0E5ED1005BFF74 /* AppDelegate.swift */; };
 		4924D5CD1D0E5ED1005BFF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4924D5CC1D0E5ED1005BFF74 /* Assets.xcassets */; };
 		4924D5D01D0E5ED2005BFF74 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4924D5CE1D0E5ED2005BFF74 /* MainMenu.xib */; };
@@ -15,7 +16,6 @@
 		4924D5E61D0E5ED2005BFF74 /* WeekCountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5E51D0E5ED2005BFF74 /* WeekCountUITests.swift */; };
 		4924D5F41D0E6841005BFF74 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */; };
 		499DD0E71D0E717E00A9CB00 /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 499DD0E51D0E717E00A9CB00 /* PreferencesWindow.swift */; };
-		499DD0E81D0E717E00A9CB00 /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 499DD0E61D0E717E00A9CB00 /* PreferencesWindow.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +38,8 @@
 /* Begin PBXFileReference section */
 		491F81DA1D0E970D008B29EC /* Semester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		491F81E21D0ECFB0008B29EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
+		491F81E81D0ED14A008B29EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
+		491F81E91D0ED15D008B29EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/PreferencesWindow.strings"; sourceTree = "<group>"; };
 		4924D5C71D0E5ED1005BFF74 /* WeekCount.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WeekCount.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4924D5CA1D0E5ED1005BFF74 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4924D5CC1D0E5ED1005BFF74 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -51,7 +53,6 @@
 		4924D5E71D0E5ED2005BFF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		499DD0E51D0E717E00A9CB00 /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PreferencesWindow.swift; path = ../PreferencesWindow.swift; sourceTree = "<group>"; };
-		499DD0E61D0E717E00A9CB00 /* PreferencesWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = PreferencesWindow.xib; path = ../PreferencesWindow.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,7 +108,7 @@
 				499DD0E51D0E717E00A9CB00 /* PreferencesWindow.swift */,
 				491F81DA1D0E970D008B29EC /* Semester.swift */,
 				4924D5CC1D0E5ED1005BFF74 /* Assets.xcassets */,
-				499DD0E61D0E717E00A9CB00 /* PreferencesWindow.xib */,
+				491F81E51D0ED114008B29EC /* PreferencesWindow.xib */,
 				4924D5CE1D0E5ED2005BFF74 /* MainMenu.xib */,
 				4924D5D11D0E5ED2005BFF74 /* Info.plist */,
 			);
@@ -238,7 +239,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4924D5CD1D0E5ED1005BFF74 /* Assets.xcassets in Resources */,
-				499DD0E81D0E717E00A9CB00 /* PreferencesWindow.xib in Resources */,
+				491F81E31D0ED114008B29EC /* PreferencesWindow.xib in Resources */,
 				4924D5D01D0E5ED2005BFF74 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +304,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		491F81E51D0ED114008B29EC /* PreferencesWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				491F81E81D0ED14A008B29EC /* Base */,
+				491F81E91D0ED15D008B29EC /* zh-Hans */,
+			);
+			name = PreferencesWindow.xib;
+			path = ..;
+			sourceTree = "<group>";
+		};
 		4924D5CE1D0E5ED2005BFF74 /* MainMenu.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
