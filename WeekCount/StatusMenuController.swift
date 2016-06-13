@@ -12,7 +12,6 @@ let DEFAULT_STARTDATE = NSDate.init(timeIntervalSince1970: 1456099200)
 let DEFAULT_LASTCOUNT = 18
 let DEFAULT_DISPLAYFORMAT = "Week {W}"
 let DEFAULT_FONTSIZE: Float = 14.25
-let DEFAULT_AUTOLAUNCH = NSOnState
 
 class StatusMenuController: NSObject, PreferencesWindowDelegate {
 
@@ -66,9 +65,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         if let size = defaults.stringForKey("fontSize") {
             fontSize = Float(size)
         } else { fontSize = DEFAULT_FONTSIZE }
-        
-        autoLaunch = defaults.valueForKey("autoLaunch") as? Int ?? DEFAULT_AUTOLAUNCH
-        
+            
         sem = Semester.init(startDate: startDate, lastCount: lastCount)
     }
     

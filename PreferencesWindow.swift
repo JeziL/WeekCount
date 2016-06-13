@@ -28,7 +28,6 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
         delegate?.preferencesDidUpdate()
     }
     @IBOutlet var fontSizeField: NSTextField!
-    @IBOutlet var autoLaunchButton: NSButton!
     
     var delegate: PreferencesWindowDelegate?
     
@@ -51,7 +50,6 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
         lastCountField.stringValue = defaults.stringForKey("lastCount") ?? String(DEFAULT_LASTCOUNT)
         displayFormatField.stringValue = defaults.stringForKey("displayFormat") ?? DEFAULT_DISPLAYFORMAT
         fontSizeField.stringValue = defaults.stringForKey("fontSize") ?? String(DEFAULT_FONTSIZE)
-        autoLaunchButton.state = defaults.valueForKey("autoLaunch") as? Int ?? DEFAULT_AUTOLAUNCH
         
         lastStepper.intValue = lastCountField.intValue
         fontSizeStepper.floatValue = fontSizeField.floatValue
@@ -75,7 +73,6 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
         defaults.setValue(lastCountField.stringValue, forKey: "lastCount")
         defaults.setValue(displayFormatField.stringValue, forKey: "displayFormat")
         defaults.setValue(fontSizeField.stringValue, forKey: "fontSize")
-        defaults.setValue(autoLaunchButton.state, forKey: "autoLaunch")
         
         defaults.synchronize()
         

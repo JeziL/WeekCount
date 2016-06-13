@@ -101,12 +101,12 @@
 		4924D5C91D0E5ED1005BFF74 /* WeekCount */ = {
 			isa = PBXGroup;
 			children = (
-				499DD0E51D0E717E00A9CB00 /* PreferencesWindow.swift */,
-				499DD0E61D0E717E00A9CB00 /* PreferencesWindow.xib */,
 				4924D5CA1D0E5ED1005BFF74 /* AppDelegate.swift */,
 				4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */,
+				499DD0E51D0E717E00A9CB00 /* PreferencesWindow.swift */,
 				491F81DA1D0E970D008B29EC /* Semester.swift */,
 				4924D5CC1D0E5ED1005BFF74 /* Assets.xcassets */,
+				499DD0E61D0E717E00A9CB00 /* PreferencesWindow.xib */,
 				4924D5CE1D0E5ED2005BFF74 /* MainMenu.xib */,
 				4924D5D11D0E5ED2005BFF74 /* Info.plist */,
 			);

@@ -6,7 +6,6 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="PreferencesWindow" customModule="WeekCount" customModuleProvider="target">
             <connections>
-                <outlet property="autoLaunchButton" destination="d2h-Sf-Tdv" id="KqJ-xa-8AL"/>
                 <outlet property="displayFormatField" destination="lda-A6-Ual" id="1fw-Wn-NAr"/>
                 <outlet property="fontSizeField" destination="ATo-1a-S2R" id="y6k-0k-Znt"/>
                 <outlet property="fontSizeStepper" destination="RDZ-pg-UvO" id="1Dg-rn-dTX"/>
@@ -21,14 +20,14 @@
         <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" animationBehavior="default" id="F0z-JX-Cv5">
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-            <rect key="contentRect" x="196" y="240" width="350" height="220"/>
+            <rect key="contentRect" x="196" y="240" width="350" height="184"/>
             <rect key="screenRect" x="0.0" y="0.0" width="1440" height="877"/>
             <view key="contentView" id="se5-gp-TjO">
-                <rect key="frame" x="0.0" y="0.0" width="350" height="220"/>
+                <rect key="frame" x="0.0" y="0.0" width="350" height="184"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GB0-MX-hOM">
-                        <rect key="frame" x="28" y="182" width="135" height="18"/>
+                        <rect key="frame" x="28" y="146" width="135" height="18"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Semester starts on:" id="8ug-fU-KXx">
                             <font key="font" metaFont="system" size="14"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -36,7 +35,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NGL-kp-hXV">
-                        <rect key="frame" x="28" y="140" width="135" height="18"/>
+                        <rect key="frame" x="28" y="104" width="135" height="18"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Semester lasts for:" id="qBS-8F-ioH">
                             <font key="font" metaFont="system" size="14"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -44,7 +43,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rIH-OX-hmg">
-                        <rect key="frame" x="287" y="140" width="45" height="18"/>
+                        <rect key="frame" x="287" y="104" width="45" height="18"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="weeks" id="vRK-MD-ANx">
                             <font key="font" metaFont="system" size="14"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -52,7 +51,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="blS-y7-8J6">
-                        <rect key="frame" x="28" y="99" width="135" height="18"/>
+                        <rect key="frame" x="28" y="63" width="135" height="18"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Display format:" id="uwh-Bq-ZxB">
                             <font key="font" metaFont="system" size="14"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -60,7 +59,7 @@
                         </textFieldCell>
                     </textField>
                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1lq-jV-n3V">
-                        <rect key="frame" x="28" y="58" width="135" height="18"/>
+                        <rect key="frame" x="28" y="22" width="135" height="18"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Font size:" id="dcd-S7-7AT">
                             <font key="font" metaFont="system" size="14"/>
                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -68,7 +67,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="lda-A6-Ual">
-                        <rect key="frame" x="177" y="97" width="153" height="22"/>
+                        <rect key="frame" x="177" y="61" width="153" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="mZE-VJ-HJL">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -76,7 +75,7 @@
                         </textFieldCell>
                     </textField>
                     <datePicker verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ISx-NK-dgE">
-                        <rect key="frame" x="177" y="177" width="156" height="27"/>
+                        <rect key="frame" x="177" y="141" width="156" height="27"/>
                         <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="aPx-Gl-q5M">
                             <font key="font" metaFont="system"/>
                             <calendarDate key="date" timeIntervalSinceReferenceDate="-595929600" calendarFormat="%Y-%m-%d %H:%M:%S %z">
@@ -88,14 +87,14 @@
                         </datePickerCell>
                     </datePicker>
                     <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0Zt-a1-aiz">
-                        <rect key="frame" x="265" y="135" width="19" height="27"/>
+                        <rect key="frame" x="265" y="99" width="19" height="27"/>
                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="25" doubleValue="18" id="aqc-30-Jga"/>
                         <connections>
                             <action selector="stepperClicked:" target="-2" id="KAC-ZR-1vg"/>
                         </connections>
                     </stepper>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="oto-KX-rPO">
-                        <rect key="frame" x="177" y="138" width="88" height="22"/>
+                        <rect key="frame" x="177" y="102" width="88" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="YbV-ok-8Tt">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -103,7 +102,7 @@
                         </textFieldCell>
                     </textField>
                     <textField verticalHuggingPriority="750" fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="ATo-1a-S2R">
-                        <rect key="frame" x="177" y="56" width="137" height="22"/>
+                        <rect key="frame" x="177" y="20" width="137" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="jO2-zF-3or">
                             <font key="font" metaFont="system"/>
                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -111,25 +110,18 @@
                         </textFieldCell>
                     </textField>
                     <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RDZ-pg-UvO">
-                        <rect key="frame" x="314" y="53" width="19" height="27"/>
+                        <rect key="frame" x="314" y="17" width="19" height="27"/>
                         <stepperCell key="cell" continuous="YES" alignment="left" maxValue="20" doubleValue="14.25" id="ifV-pE-UCB"/>
                         <connections>
                             <action selector="fontSizeStepperClicked:" target="-2" id="gLk-tj-vmh"/>
                         </connections>
                     </stepper>
-                    <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="d2h-Sf-Tdv">
-                        <rect key="frame" x="214" y="18" width="118" height="18"/>
-                        <buttonCell key="cell" type="check" title="Launch on login" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="THX-BL-WbF">
-                            <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                    </button>
                 </subviews>
             </view>
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="426" y="242"/>
+            <point key="canvasLocation" x="426" y="224"/>
         </window>
     </objects>
 </document>
