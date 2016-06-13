@@ -20,6 +20,12 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         lastCountField.stringValue = "\(sender.intValue)"
     }
     @IBOutlet var displayFormatField: NSTextField!
+    @IBAction func fontSizeStepperClicked(sender: NSStepper) {
+        fontSizeField.stringValue = "\(sender.floatValue)"
+        NSUserDefaults.standardUserDefaults().setValue(fontSizeField.stringValue, forKey: "fontSize")
+        delegate?.preferencesDidUpdate()
+    }
+    @IBOutlet var fontSizeField: NSTextField!
     @IBOutlet var autoLaunchButton: NSButton!
     
     var delegate: PreferencesWindowDelegate?
@@ -38,6 +44,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         startDatePicker.dateValue = defaults.valueForKey("startDate") as? NSDate ?? DEFAULT_STARTDATE
         lastCountField.stringValue = defaults.stringForKey("lastCount") ?? String(DEFAULT_LASTCOUNT)
         displayFormatField.stringValue = defaults.stringForKey("displayFormat") ?? DEFAULT_DISPLAYFORMAT
+        fontSizeField.stringValue = defaults.stringForKey("fontSize") ?? String(DEFAULT_FONTSIZE)
         autoLaunchButton.state = defaults.valueForKey("autoLaunch") as? Int ?? DEFAULT_AUTOLAUNCH
     }
     
@@ -46,6 +53,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         defaults.setValue(startDatePicker.dateValue, forKey: "startDate")
         defaults.setValue(lastCountField.stringValue, forKey: "lastCount")
         defaults.setValue(displayFormatField.stringValue, forKey: "displayFormat")
+        defaults.setValue(fontSizeField.stringValue, forKey: "fontSize")
         defaults.setValue(autoLaunchButton.state, forKey: "autoLaunch")
         
         defaults.synchronize()

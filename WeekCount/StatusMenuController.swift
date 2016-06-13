@@ -11,6 +11,7 @@ import Cocoa
 let DEFAULT_STARTDATE = NSDate.init(timeIntervalSince1970: 1456099200)
 let DEFAULT_LASTCOUNT = 18
 let DEFAULT_DISPLAYFORMAT = "Week {W}"
+let DEFAULT_FONTSIZE: Float = 14.25
 let DEFAULT_AUTOLAUNCH = NSOnState
 
 class StatusMenuController: NSObject, PreferencesWindowDelegate {
@@ -21,6 +22,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     var startDate: NSDate!
     var lastCount: Int!
     var displayFormat: String!
+    var fontSize: Float!
     var autoLaunch: Int!
     
     var sem: Semester!
@@ -31,6 +33,9 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         
         preferencesWindow = PreferencesWindow()
         preferencesWindow.delegate = self
+        
+        //!
+        NSUserDefaults.standardUserDefaults().setPersistentDomain(["":""], forName: NSBundle.mainBundle().bundleIdentifier!)
         
         updatePreferences()
         updateDisplay()
@@ -52,8 +57,17 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     func updatePreferences() {
         let defaults = NSUserDefaults.standardUserDefaults()
         startDate = defaults.valueForKey("startDate") as? NSDate ?? DEFAULT_STARTDATE
-        lastCount = Int(defaults.stringForKey("lastCount")!) ?? DEFAULT_LASTCOUNT
+        
+        if let count = defaults.stringForKey("lastCount") {
+            lastCount = Int(count)
+        } else { lastCount = DEFAULT_LASTCOUNT }
+        
         displayFormat = defaults.stringForKey("displayFormat") ?? DEFAULT_DISPLAYFORMAT
+        
+        if let size = defaults.stringForKey("fontSize") {
+            fontSize = Float(size)
+        } else { fontSize = DEFAULT_FONTSIZE }
+        
         autoLaunch = defaults.valueForKey("autoLaunch") as? Int ?? DEFAULT_AUTOLAUNCH
         
         sem = Semester.init(startDate: startDate, lastCount: lastCount)
@@ -66,7 +80,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     func showWeekCount(count: Int) -> NSAttributedString {
-        let font = NSFont.systemFontOfSize(14.25)
+        let font = NSFont.systemFontOfSize(CGFloat(fontSize))
         if count > 0 {
             let rawStr = displayFormat.stringByReplacingOccurrencesOfString("{W}", withString: String(count))
             return NSAttributedString.init(string: rawStr, attributes: [NSFontAttributeName: font])
