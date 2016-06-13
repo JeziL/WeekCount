@@ -9,7 +9,9 @@
                 <outlet property="autoLaunchButton" destination="d2h-Sf-Tdv" id="KqJ-xa-8AL"/>
                 <outlet property="displayFormatField" destination="lda-A6-Ual" id="1fw-Wn-NAr"/>
                 <outlet property="fontSizeField" destination="ATo-1a-S2R" id="y6k-0k-Znt"/>
+                <outlet property="fontSizeStepper" destination="RDZ-pg-UvO" id="1Dg-rn-dTX"/>
                 <outlet property="lastCountField" destination="oto-KX-rPO" id="nUe-AU-ZK3"/>
+                <outlet property="lastStepper" destination="0Zt-a1-aiz" id="fan-yL-FrA"/>
                 <outlet property="startDatePicker" destination="ISx-NK-dgE" id="0JB-Rh-fWS"/>
                 <outlet property="window" destination="F0z-JX-Cv5" id="gIp-Ho-8D9"/>
             </connections>
@@ -65,7 +67,7 @@
                             <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lda-A6-Ual">
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" tag="10" translatesAutoresizingMaskIntoConstraints="NO" id="lda-A6-Ual">
                         <rect key="frame" x="177" y="97" width="153" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="mZE-VJ-HJL">
                             <font key="font" metaFont="system"/>
@@ -92,7 +94,7 @@
                             <action selector="stepperClicked:" target="-2" id="KAC-ZR-1vg"/>
                         </connections>
                     </stepper>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oto-KX-rPO">
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="oto-KX-rPO">
                         <rect key="frame" x="177" y="138" width="88" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="YbV-ok-8Tt">
                             <font key="font" metaFont="system"/>
@@ -100,7 +102,7 @@
                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                         </textFieldCell>
                     </textField>
-                    <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ATo-1a-S2R">
+                    <textField verticalHuggingPriority="750" fixedFrame="YES" tag="15" translatesAutoresizingMaskIntoConstraints="NO" id="ATo-1a-S2R">
                         <rect key="frame" x="177" y="56" width="137" height="22"/>
                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="jO2-zF-3or">
                             <font key="font" metaFont="system"/>
@@ -127,7 +129,7 @@
             <connections>
                 <outlet property="delegate" destination="-2" id="0bl-1N-AYu"/>
             </connections>
-            <point key="canvasLocation" x="371" y="425"/>
+            <point key="canvasLocation" x="426" y="242"/>
         </window>
     </objects>
 </document>

@@ -12,14 +12,16 @@ protocol PreferencesWindowDelegate {
 
 import Cocoa
 
-class PreferencesWindow: NSWindowController, NSWindowDelegate {
+class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelegate {
 
     @IBOutlet var startDatePicker: NSDatePicker!
     @IBOutlet var lastCountField: NSTextField!
+    @IBOutlet var lastStepper: NSStepper!
     @IBAction func stepperClicked(sender: NSStepper) {
         lastCountField.stringValue = "\(sender.intValue)"
     }
     @IBOutlet var displayFormatField: NSTextField!
+    @IBOutlet var fontSizeStepper: NSStepper!
     @IBAction func fontSizeStepperClicked(sender: NSStepper) {
         fontSizeField.stringValue = "\(sender.floatValue)"
         NSUserDefaults.standardUserDefaults().setValue(fontSizeField.stringValue, forKey: "fontSize")
@@ -40,15 +42,34 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate {
         self.window?.makeKeyAndOrderFront(nil)
         NSApp.activateIgnoringOtherApps(true)
         
+        lastCountField.delegate = self
+        fontSizeField.delegate = self
+        displayFormatField.delegate = self
+        
         let defaults = NSUserDefaults.standardUserDefaults()
         startDatePicker.dateValue = defaults.valueForKey("startDate") as? NSDate ?? DEFAULT_STARTDATE
         lastCountField.stringValue = defaults.stringForKey("lastCount") ?? String(DEFAULT_LASTCOUNT)
         displayFormatField.stringValue = defaults.stringForKey("displayFormat") ?? DEFAULT_DISPLAYFORMAT
         fontSizeField.stringValue = defaults.stringForKey("fontSize") ?? String(DEFAULT_FONTSIZE)
         autoLaunchButton.state = defaults.valueForKey("autoLaunch") as? Int ?? DEFAULT_AUTOLAUNCH
+        
+        lastStepper.intValue = lastCountField.intValue
+        fontSizeStepper.floatValue = fontSizeField.floatValue
+    }
+    
+    override func controlTextDidChange(notification: NSNotification) {
+        let object = notification.object as! NSTextField
+        if object.tag == 15 {
+            fontSizeStepper.floatValue = object.floatValue
+        }
+        updatePreferences()
     }
     
     func windowWillClose(notification: NSNotification) {
+        updatePreferences()
+    }
+    
+    func updatePreferences() {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setValue(startDatePicker.dateValue, forKey: "startDate")
         defaults.setValue(lastCountField.stringValue, forKey: "lastCount")

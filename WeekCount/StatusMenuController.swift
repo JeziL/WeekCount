@@ -34,8 +34,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         preferencesWindow = PreferencesWindow()
         preferencesWindow.delegate = self
         
-        //!
-        NSUserDefaults.standardUserDefaults().setPersistentDomain(["":""], forName: NSBundle.mainBundle().bundleIdentifier!)
+        //NSUserDefaults.standardUserDefaults().setPersistentDomain(["":""], forName: NSBundle.mainBundle().bundleIdentifier!)
         
         updatePreferences()
         updateDisplay()
