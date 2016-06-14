@@ -32,8 +32,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         
         preferencesWindow = PreferencesWindow()
         preferencesWindow.delegate = self
-        
-        //NSUserDefaults.standardUserDefaults().setPersistentDomain(["":""], forName: NSBundle.mainBundle().bundleIdentifier!)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("updateAll"), name: "URLSchemesReceived", object: nil)
         
         let timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateAll"), userInfo: nil, repeats: true)
         let loop = NSRunLoop.mainRunLoop()
@@ -46,6 +45,11 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     @IBAction func showPreferencesWindow(sender: NSMenuItem) {
         preferencesWindow.showWindow(nil)
+    }
+    
+    func resetPreferences() {
+        NSUserDefaults.standardUserDefaults().setPersistentDomain(["":""], forName: NSBundle.mainBundle().bundleIdentifier!)
+        updateAll()
     }
     
     func updateAll() {
