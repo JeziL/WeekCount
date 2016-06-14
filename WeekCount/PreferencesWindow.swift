@@ -45,6 +45,14 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
         fontSizeField.delegate = self
         displayFormatField.delegate = self
         
+        displayPreferences()
+    }
+    
+    func windowDidBecomeKey(notification: NSNotification) {
+        displayPreferences()
+    }
+    
+    func displayPreferences() {
         let defaults = NSUserDefaults.standardUserDefaults()
         startDatePicker.dateValue = defaults.valueForKey("startDate") as? NSDate ?? DEFAULT_STARTDATE
         lastCountField.stringValue = defaults.stringForKey("lastCount") ?? String(DEFAULT_LASTCOUNT)
@@ -54,6 +62,7 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
         lastStepper.intValue = lastCountField.intValue
         fontSizeStepper.floatValue = fontSizeField.floatValue
     }
+    
     
     override func controlTextDidChange(notification: NSNotification) {
         let object = notification.object as! NSTextField
@@ -70,10 +79,13 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
     func updatePreferences() {
         let defaults = NSUserDefaults.standardUserDefaults()
         defaults.setValue(startDatePicker.dateValue, forKey: "startDate")
-        defaults.setValue(lastCountField.stringValue, forKey: "lastCount")
+        if Int(lastCountField.stringValue) != nil {
+            defaults.setValue(lastCountField.stringValue, forKey: "lastCount")
+        }
         defaults.setValue(displayFormatField.stringValue, forKey: "displayFormat")
-        defaults.setValue(fontSizeField.stringValue, forKey: "fontSize")
-        
+        if Float(fontSizeField.stringValue) != nil {
+            defaults.setValue(fontSizeField.stringValue, forKey: "fontSize")
+        }
         defaults.synchronize()
         
         delegate?.preferencesDidUpdate()

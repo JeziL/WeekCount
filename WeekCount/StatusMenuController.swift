@@ -54,8 +54,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     func preferencesDidUpdate() {
-        updatePreferences()
-        updateDisplay()
+        updateAll()
     }
     
     func updatePreferences() {
@@ -63,13 +62,17 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         startDate = defaults.valueForKey("startDate") as? NSDate ?? DEFAULT_STARTDATE
         
         if let count = defaults.stringForKey("lastCount") {
-            lastCount = Int(count)
+            if let countNo = Int(count) {
+                lastCount = countNo
+            } else { lastCount = DEFAULT_LASTCOUNT }
         } else { lastCount = DEFAULT_LASTCOUNT }
         
         displayFormat = defaults.stringForKey("displayFormat") ?? DEFAULT_DISPLAYFORMAT
         
         if let size = defaults.stringForKey("fontSize") {
-            fontSize = Float(size)
+            if let sizeNo = Float(size) {
+                fontSize = sizeNo
+            } else { fontSize = DEFAULT_FONTSIZE }
         } else { fontSize = DEFAULT_FONTSIZE }
             
         sem = Semester.init(startDate: startDate, lastCount: lastCount)
