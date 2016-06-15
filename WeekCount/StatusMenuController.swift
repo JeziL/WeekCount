@@ -32,7 +32,9 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         
         preferencesWindow = PreferencesWindow()
         preferencesWindow.delegate = self
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("updateAll"), name: "URLSchemesReceived", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("updateAll"), name: "URLSchemesUpdate", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("showPreferencesWindow:"), name: "URLSchemesShowPreferences", object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("quit"), name: "URLSchemesQuit", object: nil)
         
         let timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateAll"), userInfo: nil, repeats: true)
         let loop = NSRunLoop.mainRunLoop()
@@ -45,6 +47,10 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     @IBAction func showPreferencesWindow(sender: NSMenuItem) {
         preferencesWindow.showWindow(nil)
+    }
+    
+    func quit() {
+        NSApplication.sharedApplication().terminate(self)
     }
     
     func resetPreferences() {
