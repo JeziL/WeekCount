@@ -68,7 +68,7 @@ WeekCount 有一套完整的 URL Schemes 支持，可通过 [Alfred](https://www
 - v1.0.2
 
 	- 修复当设置项内容不合法时应用无限崩溃的 Bug，上天的惩罚不那么严重了；
-	- 增加 URL Schemes 支持，参见 [URL Schemes](#URL-Schemes)。
+	- 增加 URL Schemes 支持，参见 [URL Schemes](#url-schemes)。
 
 - v1.0.1
 
