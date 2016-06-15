@@ -17,6 +17,44 @@
 - `显示格式` 一栏可以自定义显示在状态栏上的样式，使用 `{W}` 代表周数；
 - `学期共` 和 `字体大小` 两栏里不要试图写不是数字的东西，否则将受到上天的惩罚。
 
+## URL Schemes
+
+WeekCount 有一套完整的 URL Schemes 支持，可通过 [Alfred](https://www.alfredapp.com/) 调用。
+
+![URLSchemes](assets/URLSchemes.png)
+
+具体调用方法为（以下所有 `wc://` 替换成 `weekcount://` 也是可以的）：
+
+- 打开设置面板：
+
+	```
+	wc://
+	```
+
+- 重置设置项为默认值：
+
+	```
+	wc://reset
+	```
+	
+- 退出 WeekCount：
+
+	```
+	wc://quit
+	```
+	
+- 更改设置项：
+
+	```
+	wc://set?startDate=20160222&lastCount=18
+	---
+	参数说明:
+	- startDate: 学期开始时间，必须是 yyyyMMdd 格式
+	- lastCount: 学期周数
+	```
+	
+	以上两个参数只传其中任意一个也是可以的，一个不传（`wc://set`）也会打开设置面板。
+
 ## 其他
 
 - 按住 `Command` 键就可以拖动它在状态栏上的位置；
@@ -26,6 +64,11 @@
 - 开机启动依然是从系统设置里添加，在 `系统偏好设置-用户与群组-登录项` 这里。
 
 ## Release Note
+
+- v1.0.2
+
+	- 修复当设置项内容不合法时应用无限崩溃的 Bug，上天的惩罚不那么严重了；
+	- 增加 URL Schemes 支持，参见 [URL Schemes](#URL-Schemes)。
 
 - v1.0.1
 
