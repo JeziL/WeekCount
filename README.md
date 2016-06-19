@@ -57,9 +57,7 @@ WeekCount 有一套完整的 URL Schemes 支持，可通过 [Alfred](https://www
 
 ## 其他
 
-<del>- 按住 `Command` 键就可以拖动它在状态栏上的位置；</del>
-
--  OS X El Capitan 及更早的系统版本推荐使用 [Bartender](https://www.macbartender.com/) 来调整图标在菜单栏上的位置；macOS Sierra 已经原生支持此特性。
+-  OS X El Capitan 及更早的系统版本推荐使用 [Bartender](https://www.macbartender.com/) 来调整图标在菜单栏上的位置；macOS Sierra 已经原生支持按住 `command` 键拖动来调整。
 
 - 一周的第一天是周一还是周日取决于系统设置，可在 `系统偏好设置-语言与地区-每周的第一天` 这里改动，改完可能需要重启一下 WeekCount；
 
