@@ -1,0 +1,18 @@
+
+/* Class = "NSWindow"; title = "About WeekCount"; ObjectID = "F0z-JX-Cv5"; */
+"F0z-JX-Cv5.title" = "關於 WeekCount";
+
+/* Class = "NSTextFieldCell"; title = "GitHub: https://github.com/JeziL/WeekCount"; ObjectID = "F9w-GA-E61"; */
+"F9w-GA-E61.title" = "GitHub: https://github.com/JeziL/WeekCount";
+
+/* Class = "NSTextFieldCell"; title = "WeekCount"; ObjectID = "GqH-ot-6wU"; */
+"GqH-ot-6wU.title" = "WeekCount";
+
+/* Class = "NSTextFieldCell"; title = "Copyright © 2016 Jinli Wang. \nAll rights reserved."; ObjectID = "MMJ-3R-s36"; */
+"MMJ-3R-s36.title" = "Copyright © 2016 Jinli Wang. \nAll rights reserved.";
+
+/* Class = "NSTextFieldCell"; title = "Support & Feedback: hi@wangjinli.com"; ObjectID = "XC1-2r-e3d"; */
+"XC1-2r-e3d.title" = "支援 & 反饋: hi@wangjinli.com";
+
+/* Class = "NSTextFieldCell"; title = "v1.0.3"; ObjectID = "aPo-b7-SfP"; */
+"aPo-b7-SfP.title" = "v1.0.3";

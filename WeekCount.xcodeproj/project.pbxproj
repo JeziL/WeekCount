@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4900A9CE1D180EE00086DE49 /* AboutWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4900A9CC1D180EE00086DE49 /* AboutWindow.swift */; };
-		4900A9CF1D180EE00086DE49 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4900A9CD1D180EE00086DE49 /* AboutWindow.xib */; };
+		4900A9D01D1816530086DE49 /* AboutWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4900A9D21D1816530086DE49 /* AboutWindow.xib */; };
 		491F81DB1D0E970D008B29EC /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491F81DA1D0E970D008B29EC /* Semester.swift */; };
 		491F81E31D0ED114008B29EC /* PreferencesWindow.xib in Resources */ = {isa = PBXBuildFile; fileRef = 491F81E51D0ED114008B29EC /* PreferencesWindow.xib */; };
 		4924D5CB1D0E5ED1005BFF74 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5CA1D0E5ED1005BFF74 /* AppDelegate.swift */; };
@@ -39,7 +39,9 @@
 
 /* Begin PBXFileReference section */
 		4900A9CC1D180EE00086DE49 /* AboutWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
-		4900A9CD1D180EE00086DE49 /* AboutWindow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AboutWindow.xib; sourceTree = "<group>"; };
+		4900A9D11D1816530086DE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutWindow.xib; sourceTree = "<group>"; };
+		4900A9D41D18165E0086DE49 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AboutWindow.strings"; sourceTree = "<group>"; };
+		4900A9D61D1816610086DE49 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/AboutWindow.strings"; sourceTree = "<group>"; };
 		491F81DA1D0E970D008B29EC /* Semester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		491F81E21D0ECFB0008B29EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		491F81E81D0ED14A008B29EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
@@ -117,7 +119,7 @@
 				4924D5CC1D0E5ED1005BFF74 /* Assets.xcassets */,
 				491F81E51D0ED114008B29EC /* PreferencesWindow.xib */,
 				4924D5CE1D0E5ED2005BFF74 /* MainMenu.xib */,
-				4900A9CD1D180EE00086DE49 /* AboutWindow.xib */,
+				4900A9D21D1816530086DE49 /* AboutWindow.xib */,
 				4924D5D11D0E5ED2005BFF74 /* Info.plist */,
 			);
 			path = WeekCount;
@@ -228,6 +230,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = 4924D5BE1D0E5ED1005BFF74;
 			productRefGroup = 4924D5C81D0E5ED1005BFF74 /* Products */;
@@ -249,7 +253,7 @@
 				4924D5CD1D0E5ED1005BFF74 /* Assets.xcassets in Resources */,
 				491F81E31D0ED114008B29EC /* PreferencesWindow.xib in Resources */,
 				4924D5D01D0E5ED2005BFF74 /* MainMenu.xib in Resources */,
-				4900A9CF1D180EE00086DE49 /* AboutWindow.xib in Resources */,
+				4900A9D01D1816530086DE49 /* AboutWindow.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +318,16 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		4900A9D21D1816530086DE49 /* AboutWindow.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4900A9D11D1816530086DE49 /* Base */,
+				4900A9D41D18165E0086DE49 /* zh-Hans */,
+				4900A9D61D1816610086DE49 /* zh-Hant */,
+			);
+			name = AboutWindow.xib;
+			sourceTree = "<group>";
+		};
 		491F81E51D0ED114008B29EC /* PreferencesWindow.xib */ = {
 			isa = PBXVariantGroup;
 			children = (
