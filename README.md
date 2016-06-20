@@ -1,6 +1,6 @@
 # WeekCount
 
-[![Build Status](https://travis-ci.org/JeziL/WeekCount.svg?branch=master)](https://travis-ci.org/JeziL/WeekCount)&nbsp;&nbsp;&nbsp;[![Code Climate](https://codeclimate.com/github/JeziL/WeekCount/badges/gpa.svg)](https://codeclimate.com/github/JeziL/WeekCount)
+![Platform](https://img.shields.io/badge/platform-OS%20X-orange.svg)&nbsp;&nbsp;&nbsp;![SDK](https://img.shields.io/badge/SDK-10.11-lightgrey.svg)&nbsp;&nbsp;&nbsp;[![Build Status](https://travis-ci.org/JeziL/WeekCount.svg?branch=master)](https://travis-ci.org/JeziL/WeekCount)&nbsp;&nbsp;&nbsp;[![Code Climate](https://codeclimate.com/github/JeziL/WeekCount/badges/gpa.svg)](https://codeclimate.com/github/JeziL/WeekCount)&nbsp;&nbsp;&nbsp;[![GitHub license](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://raw.githubusercontent.com/JeziL/WeekCount/master/LICENSE)
 
 ![Screenshot](assets/screenshot.png)
 
