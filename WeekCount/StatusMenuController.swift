@@ -33,11 +33,11 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     var sem: Semester!
     
-    let statusItem = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+    var statusItem: NSStatusItem!// = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
     
     override func awakeFromNib() {
         
-        statusItem._initInStatusBar(NSStatusBar.systemStatusBar(), withLength: NSVariableStatusItemLength, withPriority: NSStatusBarItemPrioritySystem)
+        statusItem = NSStatusItem()._initInStatusBar(NSStatusBar.systemStatusBar(), withLength: NSVariableStatusItemLength, withPriority: NSStatusBarItemPrioritySystem)
         
         preferencesWindow = PreferencesWindow()
         aboutWindow = AboutWindow()
