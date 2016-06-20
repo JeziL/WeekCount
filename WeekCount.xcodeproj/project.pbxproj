@@ -42,6 +42,7 @@
 		4900A9D11D1816530086DE49 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/AboutWindow.xib; sourceTree = "<group>"; };
 		4900A9D41D18165E0086DE49 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/AboutWindow.strings"; sourceTree = "<group>"; };
 		4900A9D61D1816610086DE49 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/AboutWindow.strings"; sourceTree = "<group>"; };
+		4900A9D71D1818F90086DE49 /* NSStatusItem+Private.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSStatusItem+Private.h"; sourceTree = "<group>"; };
 		491F81DA1D0E970D008B29EC /* Semester.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		491F81E21D0ECFB0008B29EC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/MainMenu.strings"; sourceTree = "<group>"; };
 		491F81E81D0ED14A008B29EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/PreferencesWindow.xib; sourceTree = "<group>"; };
@@ -121,6 +122,7 @@
 				4924D5CE1D0E5ED2005BFF74 /* MainMenu.xib */,
 				4900A9D21D1816530086DE49 /* AboutWindow.xib */,
 				4924D5D11D0E5ED2005BFF74 /* Info.plist */,
+				4900A9D71D1818F90086DE49 /* NSStatusItem+Private.h */,
 			);
 			path = WeekCount;
 			sourceTree = "<group>";
@@ -445,6 +447,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangjinli.WeekCount;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeekCount/NSStatusItem+Private.h";
 			};
 			name = Debug;
 		};
@@ -461,6 +464,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangjinli.WeekCount;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "WeekCount/NSStatusItem+Private.h";
 			};
 			name = Release;
 		};
