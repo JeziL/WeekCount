@@ -65,6 +65,10 @@ WeekCount 有一套完整的 URL Schemes 支持，可通过 [Alfred](https://www
 
 ## Release Note
 
+- v1.0.3
+
+	- 修复在系统设置中修改一周的第一天后可能没有效果的 Bug。
+
 - v1.0.2
 
 	- 修复当设置项内容不合法时应用无限崩溃的 Bug，上天的惩罚不那么严重了；
