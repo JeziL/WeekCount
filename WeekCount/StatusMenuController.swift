@@ -16,6 +16,7 @@ let DEFAULT_FONTSIZE: Float = 14.25
 class StatusMenuController: NSObject, PreferencesWindowDelegate {
 
     @IBOutlet weak var statusMenu: NSMenu!
+    @IBOutlet weak var dateMenuItem: NSMenuItem!
     
     var preferencesWindow: PreferencesWindow!
     var startDate: NSDate!
@@ -39,7 +40,6 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         let timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateAll"), userInfo: nil, repeats: true)
         let loop = NSRunLoop.mainRunLoop()
         loop.addTimer(timer, forMode: NSDefaultRunLoopMode)
-        
         statusMenu.itemArray.last!.action = Selector("terminate:")
         statusItem.menu = statusMenu
         
@@ -47,6 +47,10 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     @IBAction func showPreferencesWindow(sender: NSMenuItem) {
         preferencesWindow.showWindow(nil)
+    }
+    
+    @IBAction func showAboutWindow(sender: NSMenuItem) {
+        
     }
     
     func quit() {
@@ -59,6 +63,10 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     func updateAll() {
+        let formatter = NSDateFormatter()
+        formatter.locale = NSLocale.autoupdatingCurrentLocale()
+        formatter.dateStyle = .FullStyle
+        dateMenuItem.title = formatter.stringFromDate(NSDate())
         updatePreferences()
         updateDisplay()
     }
@@ -94,10 +102,34 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         }
     }
     
+    func convertToChinese(count: Int) -> String {
+        let hiDict = [0: "", 1: "十", 2: "二十", 3: "三十", 4: "四十", 5: "五十", 6: "六十", 7: "七十", 8: "八十", 9: "九十"]
+        let loDict = [0: "", 1: "一", 2: "二", 3: "三", 4: "四", 5: "五", 6: "六", 7: "七", 8: "八", 9: "九"]
+        guard (count > 0 && count < 100) else { return "" }
+        let hi = count / 10
+        let lo = count % 10
+        return hiDict[hi]! + loDict[lo]!
+    }
+    
+    func iso8601Format(var str: String) -> String {
+        let formatter = NSDateFormatter()
+        formatter.locale = NSLocale.autoupdatingCurrentLocale()
+        let supportedStrings = ["YYYY", "YY", "Y", "yyyy", "yy", "y", "MM", "M", "dd", "d", "EEEE", "eeee", "HH", "H", "hh", "h", "mm", "m", "ss", "s"]
+        for e in supportedStrings {
+            formatter.dateFormat = e
+            let convertedStr = formatter.stringFromDate(NSDate())
+            str = str.stringByReplacingOccurrencesOfString(e, withString: convertedStr)
+        }
+        str = str.stringByReplacingOccurrencesOfString("星期", withString: "周")
+        return str
+    }
+    
     func showWeekCount(count: Int) -> NSAttributedString {
         let font = NSFont.systemFontOfSize(CGFloat(fontSize))
         if count > 0 {
-            let rawStr = displayFormat.stringByReplacingOccurrencesOfString("{W}", withString: String(count))
+            var rawStr = displayFormat.stringByReplacingOccurrencesOfString("{W}", withString: String(count))
+            rawStr = rawStr.stringByReplacingOccurrencesOfString("{zhW}", withString: convertToChinese(count))
+            rawStr = iso8601Format(rawStr)
             return NSAttributedString.init(string: rawStr, attributes: [NSFontAttributeName: font])
         } else {
             return NSAttributedString.init(string: "WeekCount", attributes: [NSFontAttributeName: font])

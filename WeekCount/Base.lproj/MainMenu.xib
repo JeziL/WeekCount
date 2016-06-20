@@ -15,9 +15,19 @@
         <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
         <menu id="NPF-LY-g2a">
             <items>
+                <menuItem title="Date" enabled="NO" id="W70-wD-tTV">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="Nf5-5O-ZQS"/>
                 <menuItem title="Preferences..." keyEquivalent="," id="taV-NT-8KD">
                     <connections>
                         <action selector="showPreferencesWindow:" target="E7w-E4-qkh" id="BqD-Wj-ZLN"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="About" id="NQE-lJ-TXo">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="showAboutWindow:" target="E7w-E4-qkh" id="Xft-QR-HEB"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="9xy-yn-5Kt"/>
@@ -29,6 +39,7 @@
         </menu>
         <customObject id="E7w-E4-qkh" userLabel="StatusMenuController" customClass="StatusMenuController" customModule="WeekCount" customModuleProvider="target">
             <connections>
+                <outlet property="dateMenuItem" destination="W70-wD-tTV" id="9vm-vZ-U0P"/>
                 <outlet property="statusMenu" destination="NPF-LY-g2a" id="1Cy-px-Gfv"/>
             </connections>
         </customObject>
