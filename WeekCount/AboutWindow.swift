@@ -12,6 +12,14 @@ class AboutWindow: NSWindowController, NSWindowDelegate {
 
     @IBOutlet var versionLabel: NSTextField!
     
+    @IBAction func gitHubButtonClicked(sender: NSButton) {
+        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "https://github.com/JeziL/WeekCount")!)
+    }
+    
+    @IBAction func mailButtonClicked(sender: NSButton) {
+        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "mailto:hi@wangjinli.com")!)
+    }
+    
     override var windowNibName: String! {
         return "AboutWindow"
     }
@@ -24,7 +32,7 @@ class AboutWindow: NSWindowController, NSWindowDelegate {
     }
     
     func windowDidBecomeKey(notification: NSNotification) {
-        versionLabel.stringValue = "v" + (NSBundle.mainBundle().infoDictionary!["CFBundleShortVersionString"] as! String)
+        versionLabel.stringValue = "v" + (NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String)
     }
     
 }
