@@ -19,6 +19,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     @IBOutlet weak var dateMenuItem: NSMenuItem!
     
     var preferencesWindow: PreferencesWindow!
+    var aboutWindow: AboutWindow!
     var startDate: NSDate!
     var lastCount: Int!
     var displayFormat: String!
@@ -32,6 +33,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     override func awakeFromNib() {
         
         preferencesWindow = PreferencesWindow()
+        aboutWindow = AboutWindow()
         preferencesWindow.delegate = self
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("updateAll"), name: "URLSchemesUpdate", object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("showPreferencesWindow:"), name: "URLSchemesShowPreferences", object: nil)
@@ -50,7 +52,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     @IBAction func showAboutWindow(sender: NSMenuItem) {
-        
+        aboutWindow.showWindow(nil)
     }
     
     func quit() {
