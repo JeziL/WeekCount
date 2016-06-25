@@ -65,6 +65,11 @@ WeekCount 有一套完整的 URL Schemes 支持，可通过 [Alfred](https://www
 
 ## Release Note
 
+- v1.2.0
+
+	- 调整关于界面；
+	- 增加自动更新功能。
+
 - v1.1.0
 
 	- 在`显示格式`中可以使用 `{zhW}` 显示中文大写周数；

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:sparkle="http://www.andymatuschak.org/xml-namespaces/sparkle" xmlns:dc="http://purl.org/dc/elements/1.1/">
+    <channel>
+        <title>WeekCount's Changelog</title>
+        <link>https://raw.githubusercontent.com/JeziL/WeekCount/master/Updates/appcast.xml</link>
+        <description>Most recent changes with links to updates.</description>
+        <language>en</language>
+        <item>
+            <title>Version 1.2.0</title>
+            <sparkle:releaseNotesLink>
+                https://raw.githubusercontent.com/JeziL/WeekCount/master/Updates/release_notes.html
+            </sparkle:releaseNotesLink>
+            <pubDate>Sat, 25 Jun 2016 11:15:00 +0800</pubDate>
+            <enclosure url="https://raw.githubusercontent.com/JeziL/WeekCount/master/releases/WeekCount_latest.zip" sparkle:version="1.2.0" length="3054547" type="application/octet-stream" sparkle:dsaSignature="MC0CFEzoyzU75avGUeobd/0PtZUCcaPvAhUAhnr49X9IBxeOj+09rSBpM3NNz6A=" />
+            <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+        </item>
+    </channel>
+</rss>

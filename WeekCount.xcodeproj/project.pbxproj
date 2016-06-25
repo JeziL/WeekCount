@@ -19,6 +19,7 @@
 		4924D5F41D0E6841005BFF74 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */; };
 		49A0E42A1D1E2631008E5378 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A0E4291D1E2631008E5378 /* Sparkle.framework */; };
 		49A0E42C1D1E26C5008E5378 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49A0E4291D1E2631008E5378 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		49A0E42E1D1E2BA8008E5378 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 49A0E42D1D1E2BA8008E5378 /* dsa_pub.pem */; };
 		49A16E061D0EEE9D00BCE22D /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A16E051D0EEE9D00BCE22D /* PreferencesWindow.swift */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		4924D5E71D0E5ED2005BFF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
 		49A0E4291D1E2631008E5378 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
+		49A0E42D1D1E2BA8008E5378 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		49A16E051D0EEE9D00BCE22D /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -114,6 +116,7 @@
 				4924D5D91D0E5ED2005BFF74 /* WeekCountTests */,
 				4924D5E41D0E5ED2005BFF74 /* WeekCountUITests */,
 				4924D5C81D0E5ED1005BFF74 /* Products */,
+				49A0E42D1D1E2BA8008E5378 /* dsa_pub.pem */,
 			);
 			sourceTree = "<group>";
 		};
@@ -271,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A0E42E1D1E2BA8008E5378 /* dsa_pub.pem in Resources */,
 				4924D5CD1D0E5ED1005BFF74 /* Assets.xcassets in Resources */,
 				491F81E31D0ED114008B29EC /* PreferencesWindow.xib in Resources */,
 				4924D5D01D0E5ED2005BFF74 /* MainMenu.xib in Resources */,
