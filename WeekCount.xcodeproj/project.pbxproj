@@ -17,6 +17,8 @@
 		4924D5DB1D0E5ED2005BFF74 /* WeekCountTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5DA1D0E5ED2005BFF74 /* WeekCountTests.swift */; };
 		4924D5E61D0E5ED2005BFF74 /* WeekCountUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5E51D0E5ED2005BFF74 /* WeekCountUITests.swift */; };
 		4924D5F41D0E6841005BFF74 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */; };
+		49A0E42A1D1E2631008E5378 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A0E4291D1E2631008E5378 /* Sparkle.framework */; };
+		49A0E42C1D1E26C5008E5378 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49A0E4291D1E2631008E5378 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		49A16E061D0EEE9D00BCE22D /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A16E051D0EEE9D00BCE22D /* PreferencesWindow.swift */; };
 /* End PBXBuildFile section */
 
@@ -36,6 +38,19 @@
 			remoteInfo = WeekCount;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		49A0E42B1D1E26A3008E5378 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				49A0E42C1D1E26C5008E5378 /* Sparkle.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4900A9CC1D180EE00086DE49 /* AboutWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
@@ -61,6 +76,7 @@
 		4924D5E51D0E5ED2005BFF74 /* WeekCountUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeekCountUITests.swift; sourceTree = "<group>"; };
 		4924D5E71D0E5ED2005BFF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
+		49A0E4291D1E2631008E5378 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
 		49A16E051D0EEE9D00BCE22D /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				49A0E42A1D1E2631008E5378 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +109,7 @@
 		4924D5BE1D0E5ED1005BFF74 = {
 			isa = PBXGroup;
 			children = (
+				49A0E4291D1E2631008E5378 /* Sparkle.framework */,
 				4924D5C91D0E5ED1005BFF74 /* WeekCount */,
 				4924D5D91D0E5ED2005BFF74 /* WeekCountTests */,
 				4924D5E41D0E5ED2005BFF74 /* WeekCountUITests */,
@@ -155,6 +173,7 @@
 				4924D5C31D0E5ED1005BFF74 /* Sources */,
 				4924D5C41D0E5ED1005BFF74 /* Frameworks */,
 				4924D5C51D0E5ED1005BFF74 /* Resources */,
+				49A0E42B1D1E26A3008E5378 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -441,8 +460,12 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: Jinli Wang (7X9UFZRCPT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WeekCount/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangjinli.WeekCount;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -458,8 +481,12 @@
 				CODE_SIGN_IDENTITY = "Developer ID Application";
 				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Developer ID Application: Jinli Wang (7X9UFZRCPT)";
 				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = WeekCount/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @loader_path/../Frameworks @executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangjinli.WeekCount;
 				PRODUCT_NAME = "$(TARGET_NAME)";

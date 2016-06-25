@@ -24,18 +24,25 @@
                         <action selector="showPreferencesWindow:" target="E7w-E4-qkh" id="BqD-Wj-ZLN"/>
                     </connections>
                 </menuItem>
+                <menuItem isSeparatorItem="YES" id="2SK-sS-zHG"/>
+                <menuItem title="Check for Updates..." id="j7L-ar-rMd">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="checkForUpdates:" target="kqW-h6-gfr" id="RB2-gz-zf7"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="9xy-yn-5Kt"/>
                 <menuItem title="About" id="NQE-lJ-TXo">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
                         <action selector="showAboutWindow:" target="E7w-E4-qkh" id="Xft-QR-HEB"/>
                     </connections>
                 </menuItem>
-                <menuItem isSeparatorItem="YES" id="9xy-yn-5Kt"/>
                 <menuItem title="Quit WeekCount" id="TBm-6V-tle">
                     <modifierMask key="keyEquivalentModifierMask"/>
                 </menuItem>
             </items>
-            <point key="canvasLocation" x="218" y="353.5"/>
+            <point key="canvasLocation" x="340" y="381.5"/>
         </menu>
         <customObject id="E7w-E4-qkh" userLabel="StatusMenuController" customClass="StatusMenuController" customModule="WeekCount" customModuleProvider="target">
             <connections>
@@ -43,5 +50,6 @@
                 <outlet property="statusMenu" destination="NPF-LY-g2a" id="1Cy-px-Gfv"/>
             </connections>
         </customObject>
+        <customObject id="kqW-h6-gfr" customClass="SUUpdater"/>
     </objects>
 </document>
