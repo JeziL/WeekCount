@@ -6,18 +6,17 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
-            <title>Version 1.2.0</title>
+            <title>Version 1.2.1</title>
             <description><![CDATA[
 
-                            <p>v1.2.0</p>
-                            <ul><li>调整关于界面；</li>
-                            <li>增加自动更新功能。</li>
+                            <p>v1.2.1</p>
+                            <ul><li>修复打开设置或关于界面时，窗口不置于前台的万年 Bug。</li>
                             </ul>
                             
                             ]]>
             </description>
-            <pubDate>Sat, 25 Jun 2016 11:15:00 +0800</pubDate>
-            <enclosure url="https://raw.githubusercontent.com/JeziL/WeekCount/master/releases/WeekCount_latest.zip" sparkle:version="1.2.0" length="3054547" type="application/octet-stream" sparkle:dsaSignature="MC0CFEzoyzU75avGUeobd/0PtZUCcaPvAhUAhnr49X9IBxeOj+09rSBpM3NNz6A=" />
+            <pubDate>Thu, 30 Jun 2016 19:33:00 +0800</pubDate>
+            <enclosure url="https://raw.githubusercontent.com/JeziL/WeekCount/master/releases/WeekCount_latest.zip" sparkle:version="1.2.1" length="3054543" type="application/octet-stream" sparkle:dsaSignature="MCwCFElE0gV51+vZ87zsKa+Zzuih7piVAhR2MW275AU7zwQVQjA3TyCKC2+53Q==" />
             <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
         </item>
     </channel>

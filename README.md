@@ -65,6 +65,10 @@ WeekCount 有一套完整的 URL Schemes 支持，可通过 [Alfred](https://www
 
 ## Release Note
 
+- v1.2.1
+
+	- 修复打开设置或关于界面时，窗口不置于前台的万年 Bug。
+
 - v1.2.0
 
 	- 调整关于界面；
