@@ -38,7 +38,6 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
     override func windowDidLoad() {
         super.windowDidLoad()
         self.window?.center()
-        self.window?.makeKeyAndOrderFront(nil)
         NSApp.activateIgnoringOtherApps(true)
         
         lastCountField.delegate = self

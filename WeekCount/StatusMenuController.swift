@@ -55,10 +55,12 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     @IBAction func showPreferencesWindow(sender: NSMenuItem) {
+        NSApp.activateIgnoringOtherApps(true)
         preferencesWindow.showWindow(nil)
     }
     
     @IBAction func showAboutWindow(sender: NSMenuItem) {
+        NSApp.activateIgnoringOtherApps(true)
         aboutWindow.showWindow(nil)
     }
     

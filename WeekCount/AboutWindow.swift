@@ -27,7 +27,6 @@ class AboutWindow: NSWindowController, NSWindowDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
         self.window?.center()
-        self.window?.makeKeyAndOrderFront(nil)
         NSApp.activateIgnoringOtherApps(true)
     }
     
