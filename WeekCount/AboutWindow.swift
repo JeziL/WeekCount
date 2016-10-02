@@ -30,8 +30,9 @@ class AboutWindow: NSWindowController, NSWindowDelegate {
         NSApp.activate(ignoringOtherApps: true)
     }
     
-    func windowDidBecomeKey(notification: NSNotification) {
+    func windowDidBecomeKey(_ notification: Notification) {
         versionLabel.stringValue = "v" + (Bundle.main.infoDictionary!["CFBundleVersion"] as! String)
     }
+    
     
 }

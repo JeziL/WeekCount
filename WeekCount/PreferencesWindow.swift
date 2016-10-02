@@ -47,9 +47,10 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
         displayPreferences()
     }
     
-    func windowDidBecomeKey(notification: NSNotification) {
+    func windowDidBecomeKey(_ notification: Notification) {
         displayPreferences()
     }
+    
     
     func displayPreferences() {
         let defaults = UserDefaults.standard
@@ -63,15 +64,15 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
     }
     
     
-    override func controlTextDidChange(notification: NSNotification) {
-        let object = notification.object as! NSTextField
+    override func controlTextDidChange(_ obj: Notification) {
+        let object = obj.object as! NSTextField
         if object.tag == 15 {
             fontSizeStepper.floatValue = object.floatValue
         }
         updatePreferences()
     }
     
-    func windowWillClose(notification: NSNotification) {
+    func windowWillClose(_ notification: Notification) {
         updatePreferences()
     }
     
