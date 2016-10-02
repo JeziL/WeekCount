@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="AboutWindow" customModule="WeekCount" customModuleProvider="target">
@@ -69,22 +70,24 @@ All rights reserved.</string>
                     </textField>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Wam-92-00A" userLabel="GitHubButton">
                         <rect key="frame" x="20" y="20" width="23" height="29"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="GitHub" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="3jd-Pz-fOg">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="gitHubButtonClicked:" target="-2" id="EEv-Qr-Ouw"/>
+                            <action selector="gitHubButtonClickedWithSender:" target="-2" id="zou-LU-dn0"/>
                         </connections>
                     </button>
                     <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aXg-5v-ijh" userLabel="MailButton">
                         <rect key="frame" x="322" y="16" width="29" height="36"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="MailIcon" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="lv6-ow-6ud">
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="system"/>
                         </buttonCell>
                         <connections>
-                            <action selector="mailButtonClicked:" target="-2" id="YVc-cE-hlQ"/>
+                            <action selector="mailButtonClickedWithSender:" target="-2" id="JuE-2K-MlA"/>
                         </connections>
                     </button>
                 </subviews>
@@ -106,8 +109,8 @@ All rights reserved.</string>
         </window>
     </objects>
     <resources>
-        <image name="AboutIcon" width="256" height="256"/>
-        <image name="GitHub" width="32" height="32"/>
+        <image name="AboutIcon" width="512" height="512"/>
+        <image name="GitHub" width="64" height="64"/>
         <image name="MailIcon" width="128" height="128"/>
     </resources>
 </document>

@@ -1,7 +1,8 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="9531" systemVersion="15F34" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9531"/>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -21,7 +22,7 @@
                 <menuItem isSeparatorItem="YES" id="Nf5-5O-ZQS"/>
                 <menuItem title="Preferences..." keyEquivalent="," id="taV-NT-8KD">
                     <connections>
-                        <action selector="showPreferencesWindow:" target="E7w-E4-qkh" id="BqD-Wj-ZLN"/>
+                        <action selector="showPreferencesWindowWithSender:" target="E7w-E4-qkh" id="dEU-II-E9K"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="2SK-sS-zHG"/>
@@ -35,11 +36,14 @@
                 <menuItem title="About" id="NQE-lJ-TXo">
                     <modifierMask key="keyEquivalentModifierMask"/>
                     <connections>
-                        <action selector="showAboutWindow:" target="E7w-E4-qkh" id="Xft-QR-HEB"/>
+                        <action selector="showAboutWindowWithSender:" target="E7w-E4-qkh" id="sSp-a1-QAG"/>
                     </connections>
                 </menuItem>
                 <menuItem title="Quit WeekCount" id="TBm-6V-tle">
                     <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitApp:" target="E7w-E4-qkh" id="C68-bf-gfY"/>
+                    </connections>
                 </menuItem>
             </items>
             <point key="canvasLocation" x="340" y="381.5"/>

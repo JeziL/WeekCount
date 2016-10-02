@@ -64,6 +64,10 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         aboutWindow.showWindow(nil)
     }
     
+    @IBAction func quitApp(_ sender: NSMenuItem) {
+        quit()
+    }
+    
     func quit() {
         NSApplication.shared().terminate(self)
     }
