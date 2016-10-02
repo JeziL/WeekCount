@@ -11,14 +11,12 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
     
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ notification: Notification) {
         NSAppleEventManager.shared().setEventHandler(self, andSelector: #selector(AppDelegate.receiveURLSchemes(event:replyEvent:)), forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
-    }
-
-    func applicationWillTerminate(aNotification: NSNotification) {
     }
     
     func receiveURLSchemes(event: NSAppleEventDescriptor?, replyEvent: NSAppleEventDescriptor?) {
+        print("received.")
         if let urlStr = event?.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))?.stringValue {
             if let url = NSURL(string: urlStr) {
                 handleURLScheme(url: url)
