@@ -13,11 +13,6 @@ let DEFAULT_LASTCOUNT = 18
 let DEFAULT_DISPLAYFORMAT = "Week {W}"
 let DEFAULT_FONTSIZE: Float = 14.25
 
-let NSStatusBarItemPrioritySystem = INT_MAX - 2
-let NSStatusBarItemPrioritySpotlight = INT_MAX - 1
-let NSStatusBarItemPriorityNotificationCenter = INT_MAX
-
-
 class StatusMenuController: NSObject, PreferencesWindowDelegate {
 
     @IBOutlet weak var statusMenu: NSMenu!
@@ -33,12 +28,9 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     var sem: Semester!
     
-    var statusItem: NSStatusItem!// = NSStatusBar.systemStatusBar().statusItemWithLength(NSVariableStatusItemLength)
+    var statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
     
     override func awakeFromNib() {
-        
-        statusItem = NSStatusItem()._init(inStatusBar: NSStatusBar.system(), withLength: NSVariableStatusItemLength, withPriority: NSStatusBarItemPrioritySystem)
-        
         preferencesWindow = PreferencesWindow()
         aboutWindow = AboutWindow()
         preferencesWindow.delegate = self
