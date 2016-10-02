@@ -1,6 +1,6 @@
 # WeekCount
 
-![Platform](https://img.shields.io/badge/platform-OS%20X-orange.svg)&nbsp;&nbsp;&nbsp;![SDK](https://img.shields.io/badge/SDK-10.11-lightgrey.svg)&nbsp;&nbsp;&nbsp;[![Build Status](https://travis-ci.org/JeziL/WeekCount.svg?branch=master)](https://travis-ci.org/JeziL/WeekCount)&nbsp;&nbsp;&nbsp;[![Code Climate](https://codeclimate.com/github/JeziL/WeekCount/badges/gpa.svg)](https://codeclimate.com/github/JeziL/WeekCount)&nbsp;&nbsp;&nbsp;[![GitHub license](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://raw.githubusercontent.com/JeziL/WeekCount/master/LICENSE)
+![Platform](https://img.shields.io/badge/platform-macOS-orange.svg)&nbsp;&nbsp;&nbsp;![SDK](https://img.shields.io/badge/SDK-10.12-lightgrey.svg)&nbsp;&nbsp;&nbsp;[![Build Status](https://travis-ci.org/JeziL/WeekCount.svg?branch=master)](https://travis-ci.org/JeziL/WeekCount)&nbsp;&nbsp;&nbsp;[![Code Climate](https://codeclimate.com/github/JeziL/WeekCount/badges/gpa.svg)](https://codeclimate.com/github/JeziL/WeekCount)&nbsp;&nbsp;&nbsp;[![GitHub license](https://img.shields.io/badge/license-GPLv2-blue.svg)](https://raw.githubusercontent.com/JeziL/WeekCount/master/LICENSE)
 
 ![Screenshot](assets/screenshot.png)
 
@@ -57,13 +57,19 @@ WeekCount 有一套完整的 URL Schemes 支持，可通过 [Alfred](https://www
 
 ## 其他
 
-- 在 OS X El Capitan 及更早的系统版本里，App 在状态栏上的位置无法改动。为了更好的显示效果，我使用了一个私有 API 将它固定在系统时钟出现的位置，因此如果在 `系统偏好设置-日期与时间-时钟` 这里关掉状态栏上的时间显示，同时把 WeekCount 的显示格式设置成 `第 {W} 周 EEEE HH:mm`，效果上就可以完全替代系统的时钟；另据说 macOS Sierra 已经原生支持通过按住 `command` 键拖动来调整，如属实，在其正式版发布后会用 Swift 3 重写项目，然后移除这个私有 API。
+- 在 OS X El Capitan 及更早的系统版本里，App 在状态栏上的位置无法改动，而 macOS Sierra 原生支持通过按住 `command` 键拖动来调整位置。
 
 - 一周的第一天是周一还是周日取决于系统设置，可在 `系统偏好设置-语言与地区-每周的第一天` 这里改动，改完可能需要重启一下 WeekCount；
 
 - 开机启动依然是从系统设置里添加，在 `系统偏好设置-用户与群组-登录项` 这里。
 
 ## Release Note
+
+- v1.2.2
+
+	- 将代码更新至 Swift 3 和 macOS 10.12 SDK；
+	- 移除固定任务栏位置的私有 API，使用系统原生实现；
+	- 最低系统版本上调至 10.11 El Capitan。
 
 - v1.2.1
 
