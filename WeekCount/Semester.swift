@@ -30,13 +30,13 @@ class Semester: NSObject {
     }
     
     func getStartOfThatWeek(date: Date?) -> Date? {
-        let calendar = NSCalendar.autoupdatingCurrent
-        let currentDateComponents = calendar.components([.YearForWeekOfYear, .WeekOfYear ], fromDate: date!)
-        return calendar.dateFromComponents(currentDateComponents)
+        let calendar = Calendar.autoupdatingCurrent
+        let currentDateComponents = calendar.dateComponents([.yearForWeekOfYear, .weekOfYear], from: date!)
+        return calendar.date(from: currentDateComponents)
     }
     
     func getDaysBetween(from: Date, to: Date) -> Int {
-        return NSCalendar.autoupdatingCurrentCalendar.components(NSCalendar.Unit.Day, fromDate: from, toDate: to, options: []).day
+        return Calendar.autoupdatingCurrent.dateComponents([Calendar.Component.day], from: from, to: to).day!
     }
 
 }
