@@ -6,18 +6,20 @@
         <description>Most recent changes with links to updates.</description>
         <language>en</language>
         <item>
-            <title>Version 1.2.1</title>
+            <title>Version 1.2.2</title>
             <description><![CDATA[
 
-                            <p>v1.2.1</p>
-                            <ul><li>修复打开设置或关于界面时，窗口不置于前台的万年 Bug。</li>
+                            <p>v1.2.2</p>
+                            <ul><li>将代码更新至 Swift 3 和 macOS 10.12 SDK</li>
+                            <li>移除固定任务栏位置的私有 API，使用系统原生实现</li>
+                            <li>最低系统版本上调至 10.11 El Capitan</li>
                             </ul>
                             
                             ]]>
             </description>
-            <pubDate>Thu, 30 Jun 2016 19:33:00 +0800</pubDate>
-            <enclosure url="https://raw.githubusercontent.com/JeziL/WeekCount/master/releases/WeekCount_latest.zip" sparkle:version="1.2.1" length="3054543" type="application/octet-stream" sparkle:dsaSignature="MCwCFElE0gV51+vZ87zsKa+Zzuih7piVAhR2MW275AU7zwQVQjA3TyCKC2+53Q==" />
-            <sparkle:minimumSystemVersion>10.10</sparkle:minimumSystemVersion>
+            <pubDate>Mon, 03 Oct 2016 00:00:00 +0800</pubDate>
+            <enclosure url="https://raw.githubusercontent.com/JeziL/WeekCount/master/releases/WeekCount_latest.zip" sparkle:version="1.2.2" length="3615760" type="application/octet-stream" sparkle:dsaSignature="MCwCFCItM50+Mcp8K5e01ZblxygKNDiaAhQdyPiNSdzBp179sRNu8eg4bmaOTw==" />
+            <sparkle:minimumSystemVersion>10.11</sparkle:minimumSystemVersion>
         </item>
     </channel>
 </rss>
