@@ -130,18 +130,18 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         for e in supportedStrings {
             formatter.dateFormat = e
             let convertedStr = formatter.string(from: Date())
-            str = str.stringByReplacingOccurrencesOfString(e, withString: convertedStr)
+            str = str.replacingOccurrences(of: e, with: convertedStr)
         }
-        str = str.stringByReplacingOccurrencesOfString("星期", withString: "周")
+        str = str.replacingOccurrences(of: "星期", with: "周")
         return str
     }
     
     func showWeekCount(count: Int) -> NSAttributedString {
         let font = NSFont.systemFont(ofSize: CGFloat(fontSize))
         if count > 0 {
-            var rawStr = displayFormat.stringByReplacingOccurrencesOfString("{W}", withString: String(count))
-            rawStr = rawStr.stringByReplacingOccurrencesOfString("{zhW}", withString: convertToChinese(count))
-            rawStr = iso8601Format(rawStr)
+            var rawStr = displayFormat.replacingOccurrences(of: "{W}", with: String(count))
+            rawStr = rawStr.replacingOccurrences(of: "{zhW}", with: convertToChinese(count: count))
+            rawStr = iso8601Format(str: rawStr)
             return NSAttributedString.init(string: rawStr, attributes: [NSFontAttributeName: font])
         } else {
             return NSAttributedString.init(string: "WeekCount", attributes: [NSFontAttributeName: font])
