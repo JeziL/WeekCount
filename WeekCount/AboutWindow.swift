@@ -13,11 +13,11 @@ class AboutWindow: NSWindowController, NSWindowDelegate {
     @IBOutlet var versionLabel: NSTextField!
     
     @IBAction func gitHubButtonClicked(sender: NSButton) {
-        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "https://github.com/JeziL/WeekCount")!)
+        NSWorkspace.shared().open(URL(string: "https://github.com/JeziL/WeekCount")!)
     }
     
     @IBAction func mailButtonClicked(sender: NSButton) {
-        NSWorkspace.sharedWorkspace().openURL(NSURL(string: "mailto:hi@wangjinli.com")!)
+        NSWorkspace.shared().open(URL(string: "mailto:hi@wangjinli.com")!)
     }
     
     override var windowNibName: String! {
@@ -27,11 +27,11 @@ class AboutWindow: NSWindowController, NSWindowDelegate {
     override func windowDidLoad() {
         super.windowDidLoad()
         self.window?.center()
-        NSApp.activateIgnoringOtherApps(true)
+        NSApp.activate(ignoringOtherApps: true)
     }
     
     func windowDidBecomeKey(notification: NSNotification) {
-        versionLabel.stringValue = "v" + (NSBundle.mainBundle().infoDictionary!["CFBundleVersion"] as! String)
+        versionLabel.stringValue = "v" + (Bundle.main.infoDictionary!["CFBundleVersion"] as! String)
     }
     
 }

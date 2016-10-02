@@ -8,7 +8,7 @@
 
 import Cocoa
 
-let DEFAULT_STARTDATE = NSDate.init(timeIntervalSince1970: 1456099200)
+let DEFAULT_STARTDATE = Date.init(timeIntervalSince1970: 1456099200)
 let DEFAULT_LASTCOUNT = 18
 let DEFAULT_DISPLAYFORMAT = "Week {W}"
 let DEFAULT_FONTSIZE: Float = 14.25
@@ -25,7 +25,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     var preferencesWindow: PreferencesWindow!
     var aboutWindow: AboutWindow!
-    var startDate: NSDate!
+    var startDate: Date!
     var lastCount: Int!
     var displayFormat: String!
     var fontSize: Float!
@@ -37,47 +37,47 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     override func awakeFromNib() {
         
-        statusItem = NSStatusItem()._initInStatusBar(NSStatusBar.systemStatusBar(), withLength: NSVariableStatusItemLength, withPriority: NSStatusBarItemPrioritySystem)
+        statusItem = NSStatusItem()._init(inStatusBar: NSStatusBar.system(), withLength: NSVariableStatusItemLength, withPriority: NSStatusBarItemPrioritySystem)
         
         preferencesWindow = PreferencesWindow()
         aboutWindow = AboutWindow()
         preferencesWindow.delegate = self
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("updateAll"), name: "URLSchemesUpdate", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("showPreferencesWindow:"), name: "URLSchemesShowPreferences", object: nil)
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("quit"), name: "URLSchemesQuit", object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(StatusMenuController.updateAll), name: NSNotification.Name(rawValue: "URLSchemesUpdate"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(StatusMenuController.showPreferencesWindow), name: NSNotification.Name(rawValue: "URLSchemesShowPreferences"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(StatusMenuController.quit), name: NSNotification.Name(rawValue: "URLSchemesQuit"), object: nil)
         
-        let timer = NSTimer.scheduledTimerWithTimeInterval(0.1, target: self, selector: Selector("updateAll"), userInfo: nil, repeats: true)
-        let loop = NSRunLoop.mainRunLoop()
-        loop.addTimer(timer, forMode: NSDefaultRunLoopMode)
-        statusMenu.itemArray.last!.action = Selector("terminate:")
+        let timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(StatusMenuController.updateAll), userInfo: nil, repeats: true)
+        let loop = RunLoop.main
+        loop.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
+        statusMenu.items.last!.action = #selector(NSInputServiceProvider.terminate(_:))
         statusItem.menu = statusMenu
         
     }
     
     @IBAction func showPreferencesWindow(sender: NSMenuItem) {
-        NSApp.activateIgnoringOtherApps(true)
+        NSApp.activate(ignoringOtherApps: true)
         preferencesWindow.showWindow(nil)
     }
     
     @IBAction func showAboutWindow(sender: NSMenuItem) {
-        NSApp.activateIgnoringOtherApps(true)
+        NSApp.activate(ignoringOtherApps: true)
         aboutWindow.showWindow(nil)
     }
     
     func quit() {
-        NSApplication.sharedApplication().terminate(self)
+        NSApplication.shared().terminate(self)
     }
     
     func resetPreferences() {
-        NSUserDefaults.standardUserDefaults().setPersistentDomain(["":""], forName: NSBundle.mainBundle().bundleIdentifier!)
+        UserDefaults.standard.setPersistentDomain(["":""], forName: Bundle.main.bundleIdentifier!)
         updateAll()
     }
     
     func updateAll() {
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale.autoupdatingCurrentLocale()
+        let formatter = DateFormatter()
+        formatter.locale = NSLocale.autoupdatingCurrent
         formatter.dateStyle = .FullStyle
-        dateMenuItem.title = formatter.stringFromDate(NSDate())
+        dateMenuItem.title = formatter.string(from: Date())
         updatePreferences()
         updateDisplay()
     }
@@ -87,18 +87,18 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     func updatePreferences() {
-        let defaults = NSUserDefaults.standardUserDefaults()
-        startDate = defaults.valueForKey("startDate") as? NSDate ?? DEFAULT_STARTDATE
+        let defaults = UserDefaults.standard
+        startDate = defaults.value(forKey: "startDate") as? Date ?? DEFAULT_STARTDATE
         
-        if let count = defaults.stringForKey("lastCount") {
+        if let count = defaults.string(forKey: "lastCount") {
             if let countNo = Int(count) {
                 lastCount = countNo
             } else { lastCount = DEFAULT_LASTCOUNT }
         } else { lastCount = DEFAULT_LASTCOUNT }
         
-        displayFormat = defaults.stringForKey("displayFormat") ?? DEFAULT_DISPLAYFORMAT
+        displayFormat = defaults.string(forKey: "displayFormat") ?? DEFAULT_DISPLAYFORMAT
         
-        if let size = defaults.stringForKey("fontSize") {
+        if let size = defaults.string(forKey: "fontSize") {
             if let sizeNo = Float(size) {
                 fontSize = sizeNo
             } else { fontSize = DEFAULT_FONTSIZE }
@@ -109,7 +109,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     func updateDisplay() {
         if let button = statusItem.button {
-            button.attributedTitle = showWeekCount(sem.getWeekNo())
+            button.attributedTitle = showWeekCount(count: sem.getWeekNo())
         }
     }
     
@@ -122,13 +122,14 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         return hiDict[hi]! + loDict[lo]!
     }
     
-    func iso8601Format(var str: String) -> String {
-        let formatter = NSDateFormatter()
-        formatter.locale = NSLocale.autoupdatingCurrentLocale()
+    func iso8601Format(str: String) -> String {
+        var str = str
+        let formatter = DateFormatter()
+        formatter.locale = NSLocale.autoupdatingCurrent
         let supportedStrings = ["YYYY", "YY", "Y", "yyyy", "yy", "y", "MM", "M", "dd", "d", "EEEE", "eeee", "HH", "H", "hh", "h", "mm", "m", "ss", "s"]
         for e in supportedStrings {
             formatter.dateFormat = e
-            let convertedStr = formatter.stringFromDate(NSDate())
+            let convertedStr = formatter.string(from: Date())
             str = str.stringByReplacingOccurrencesOfString(e, withString: convertedStr)
         }
         str = str.stringByReplacingOccurrencesOfString("星期", withString: "周")
@@ -136,7 +137,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     }
     
     func showWeekCount(count: Int) -> NSAttributedString {
-        let font = NSFont.systemFontOfSize(CGFloat(fontSize))
+        let font = NSFont.systemFont(ofSize: CGFloat(fontSize))
         if count > 0 {
             var rawStr = displayFormat.stringByReplacingOccurrencesOfString("{W}", withString: String(count))
             rawStr = rawStr.stringByReplacingOccurrencesOfString("{zhW}", withString: convertToChinese(count))

@@ -10,18 +10,18 @@ import Cocoa
 
 class Semester: NSObject {
     
-    var startDate: NSDate!
+    var startDate: Date!
     var lastCount: Int!
     
-    init(startDate: NSDate, lastCount: Int) {
+    init(startDate: Date, lastCount: Int) {
         self.startDate = startDate
         self.lastCount = lastCount
     }
     
     func getWeekNo() -> Int {
-        let startFirstWeekDay = getStartOfThatWeek(startDate)
-        let currentFirstWeekDay = getStartOfThatWeek(NSDate())
-        let weeks = getDaysBetween(startFirstWeekDay!, to: currentFirstWeekDay!) / 7
+        let startFirstWeekDay = getStartOfThatWeek(date: startDate)
+        let currentFirstWeekDay = getStartOfThatWeek(date: Date())
+        let weeks = getDaysBetween(from: startFirstWeekDay!, to: currentFirstWeekDay!) / 7
         if weeks >= 0 && weeks < lastCount {
             return 1 + weeks
         } else {
@@ -29,14 +29,14 @@ class Semester: NSObject {
         }
     }
     
-    func getStartOfThatWeek(date: NSDate?) -> NSDate? {
-        let calendar = NSCalendar.autoupdatingCurrentCalendar()
+    func getStartOfThatWeek(date: Date?) -> Date? {
+        let calendar = NSCalendar.autoupdatingCurrent
         let currentDateComponents = calendar.components([.YearForWeekOfYear, .WeekOfYear ], fromDate: date!)
         return calendar.dateFromComponents(currentDateComponents)
     }
     
-    func getDaysBetween(from: NSDate, to: NSDate) -> Int {
-        return NSCalendar.autoupdatingCurrentCalendar().components(NSCalendarUnit.Day, fromDate: from, toDate: to, options: []).day
+    func getDaysBetween(from: Date, to: Date) -> Int {
+        return NSCalendar.autoupdatingCurrentCalendar.components(NSCalendar.Unit.Day, fromDate: from, toDate: to, options: []).day
     }
 
 }
