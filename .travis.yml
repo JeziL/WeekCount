@@ -7,7 +7,7 @@ branches:
 xcode_project: WeekCount.xcodeproj
 xcode_scheme: WeekCount
 osx_image: xcode8
-xcode_sdk: macosx10.11
+xcode_sdk: macosx10.12
 
 script:
 - xcodebuild clean build CODE_SIGN_IDENTITY="" CODE_SIGNING_REQUIRED=NO -project WeekCount.xcodeproj -scheme WeekCount
