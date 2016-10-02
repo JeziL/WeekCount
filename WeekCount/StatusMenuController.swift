@@ -49,7 +49,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         let timer = Timer.scheduledTimer(timeInterval: 0.1, target: self, selector: #selector(StatusMenuController.updateAll), userInfo: nil, repeats: true)
         let loop = RunLoop.main
         loop.add(timer, forMode: RunLoopMode.defaultRunLoopMode)
-        statusMenu.items.last!.action = #selector(NSInputServiceProvider.terminate(_:))
+        statusMenu.items.last!.action = #selector(StatusMenuController.quit)
         statusItem.menu = statusMenu
         
     }
@@ -76,7 +76,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     func updateAll() {
         let formatter = DateFormatter()
         formatter.locale = NSLocale.autoupdatingCurrent
-        formatter.dateStyle = .FullStyle
+        formatter.dateStyle = .full
         dateMenuItem.title = formatter.string(from: Date())
         updatePreferences()
         updateDisplay()
