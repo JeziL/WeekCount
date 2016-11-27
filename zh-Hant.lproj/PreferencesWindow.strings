@@ -6,7 +6,7 @@
 "F0z-JX-Cv5.title" = "偏好設定";
 
 /* Class = "NSTextFieldCell"; title = "Font size:"; ObjectID = "dcd-S7-7AT"; */
-"dcd-S7-7AT.title" = "字體大小:";
+"dcd-S7-7AT.title" = "字型大小:";
 
 /* Class = "NSTextFieldCell"; title = "Semester lasts for:"; ObjectID = "qBS-8F-ioH"; */
 "qBS-8F-ioH.title" = "學期共:";
@@ -15,4 +15,4 @@
 "uwh-Bq-ZxB.title" = "顯示格式:";
 
 /* Class = "NSTextFieldCell"; title = "weeks"; ObjectID = "vRK-MD-ANx"; */
-"vRK-MD-ANx.title" = "周";
+"vRK-MD-ANx.title" = "週";
