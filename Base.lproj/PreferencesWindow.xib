@@ -137,6 +137,9 @@
                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                             <font key="font" metaFont="systemHeavy" size="11"/>
                         </buttonCell>
+                        <connections>
+                            <action selector="onHelpButtonClicked:" target="-2" id="iak-nA-Tyo"/>
+                        </connections>
                     </button>
                 </subviews>
             </view>

@@ -91,4 +91,17 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
         delegate?.preferencesDidUpdate()
     }
     
+    @IBAction func onHelpButtonClicked(_ sender: NSButton) {
+        let help_en = URL(string: "http://wangjin.li/app/WeekCount/help.html")
+        let help_zhs = URL(string: "http://wangjin.li/app/WeekCount/help_zhs.html")
+        let help_zht = URL(string: "http://wangjin.li/app/WeekCount/help_zht.html")
+        var help = help_en
+        let lang = NSLocale.preferredLanguages[0]
+        if (lang.contains("zh-Hans")) {
+            help = help_zhs
+        } else if (lang.contains("zh-Hant")) {
+            help = help_zht
+        }
+        NSWorkspace.shared().open(help!);
+    }
 }
