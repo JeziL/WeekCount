@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2657" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11201"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11542"/>
     </dependencies>
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
@@ -23,13 +23,6 @@
                 <menuItem title="Preferences..." keyEquivalent="," id="taV-NT-8KD">
                     <connections>
                         <action selector="showPreferencesWindowWithSender:" target="E7w-E4-qkh" id="dEU-II-E9K"/>
-                    </connections>
-                </menuItem>
-                <menuItem isSeparatorItem="YES" id="2SK-sS-zHG"/>
-                <menuItem title="Check for Updates..." id="j7L-ar-rMd">
-                    <modifierMask key="keyEquivalentModifierMask"/>
-                    <connections>
-                        <action selector="checkForUpdates:" target="kqW-h6-gfr" id="RB2-gz-zf7"/>
                     </connections>
                 </menuItem>
                 <menuItem isSeparatorItem="YES" id="9xy-yn-5Kt"/>

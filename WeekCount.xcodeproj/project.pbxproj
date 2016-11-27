@@ -15,24 +15,8 @@
 		4924D5CD1D0E5ED1005BFF74 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4924D5CC1D0E5ED1005BFF74 /* Assets.xcassets */; };
 		4924D5D01D0E5ED2005BFF74 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4924D5CE1D0E5ED2005BFF74 /* MainMenu.xib */; };
 		4924D5F41D0E6841005BFF74 /* StatusMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */; };
-		49A0E42A1D1E2631008E5378 /* Sparkle.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 49A0E4291D1E2631008E5378 /* Sparkle.framework */; };
-		49A0E42C1D1E26C5008E5378 /* Sparkle.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 49A0E4291D1E2631008E5378 /* Sparkle.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		49A0E42E1D1E2BA8008E5378 /* dsa_pub.pem in Resources */ = {isa = PBXBuildFile; fileRef = 49A0E42D1D1E2BA8008E5378 /* dsa_pub.pem */; };
 		49A16E061D0EEE9D00BCE22D /* PreferencesWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A16E051D0EEE9D00BCE22D /* PreferencesWindow.swift */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		49A0E42B1D1E26A3008E5378 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				49A0E42C1D1E26C5008E5378 /* Sparkle.framework in CopyFiles */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4900A9CC1D180EE00086DE49 /* AboutWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutWindow.swift; sourceTree = "<group>"; };
@@ -51,8 +35,6 @@
 		4924D5CF1D0E5ED2005BFF74 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
 		4924D5D11D0E5ED2005BFF74 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4924D5F31D0E6841005BFF74 /* StatusMenuController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusMenuController.swift; sourceTree = "<group>"; };
-		49A0E4291D1E2631008E5378 /* Sparkle.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Sparkle.framework; sourceTree = "<group>"; };
-		49A0E42D1D1E2BA8008E5378 /* dsa_pub.pem */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dsa_pub.pem; sourceTree = "<group>"; };
 		49A16E051D0EEE9D00BCE22D /* PreferencesWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesWindow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -61,7 +43,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A0E42A1D1E2631008E5378 /* Sparkle.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,10 +52,8 @@
 		4924D5BE1D0E5ED1005BFF74 = {
 			isa = PBXGroup;
 			children = (
-				49A0E4291D1E2631008E5378 /* Sparkle.framework */,
 				4924D5C91D0E5ED1005BFF74 /* WeekCount */,
 				4924D5C81D0E5ED1005BFF74 /* Products */,
-				49A0E42D1D1E2BA8008E5378 /* dsa_pub.pem */,
 			);
 			sourceTree = "<group>";
 		};
@@ -113,7 +92,6 @@
 				4924D5C31D0E5ED1005BFF74 /* Sources */,
 				4924D5C41D0E5ED1005BFF74 /* Frameworks */,
 				4924D5C51D0E5ED1005BFF74 /* Resources */,
-				49A0E42B1D1E26A3008E5378 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -167,7 +145,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				49A0E42E1D1E2BA8008E5378 /* dsa_pub.pem in Resources */,
 				4924D5CD1D0E5ED1005BFF74 /* Assets.xcassets in Resources */,
 				491F81E31D0ED114008B29EC /* PreferencesWindow.xib in Resources */,
 				4924D5D01D0E5ED2005BFF74 /* MainMenu.xib in Resources */,
