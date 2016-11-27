@@ -8,10 +8,10 @@
 
 import Cocoa
 
-let DEFAULT_STARTDATE = Date.init(timeIntervalSince1970: 1456099200)
+let DEFAULT_STARTDATE = Date()
 let DEFAULT_LASTCOUNT = 18
 let DEFAULT_DISPLAYFORMAT = "Week {W}"
-let DEFAULT_FONTSIZE: Float = 14.25
+let DEFAULT_FONTSIZE: Float = 14.2
 
 class StatusMenuController: NSObject, PreferencesWindowDelegate {
 
