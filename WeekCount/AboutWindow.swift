@@ -31,7 +31,7 @@ class AboutWindow: NSWindowController, NSWindowDelegate {
     }
     
     func windowDidBecomeKey(_ notification: Notification) {
-        versionLabel.stringValue = "v" + (Bundle.main.infoDictionary!["CFBundleVersion"] as! String)
+        versionLabel.stringValue = "v" + (Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String)
     }
     
     
