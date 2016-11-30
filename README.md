@@ -8,7 +8,7 @@
 
 第一个 Swift 项目，写了两句代码，做了一点微小的工作，向今晚的 WWDC 2016 献礼。
 
-[![](assets/mas.png)](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1180401289&mt=12)
+<a href="https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1180401289&mt=12"><img src="assets/mas.png" height="40" /></a>
 
 ##设置
 
@@ -65,6 +65,12 @@ WeekCount 有一套完整的 URL Schemes 支持，可通过 [Alfred](https://www
 
 ## Release Note
 
+- v1.3.0
+	
+	- 更改默认值（起始日期为当前日期）
+	- 移除 Sparkle 升级系统
+	- 上架
+	
 - v1.2.2
 
 	- 将代码更新至 Swift 3 和 macOS 10.12 SDK；
