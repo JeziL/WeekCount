@@ -8,7 +8,7 @@
 
 第一个 Swift 项目，写了两句代码，做了一点微小的工作，向今晚的 WWDC 2016 献礼。
 
-[最新版下载](https://raw.githubusercontent.com/JeziL/WeekCount/master/releases/WeekCount_latest.zip)
+[![](assets/mas.svg)](https://itunes.apple.com/WebObjects/MZStore.woa/wa/viewSoftware?id=1180401289&mt=12)
 
 ##设置
 
