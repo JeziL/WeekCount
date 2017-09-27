@@ -15,7 +15,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         NSAppleEventManager.shared().setEventHandler(self, andSelector: #selector(AppDelegate.receiveURLSchemes(event:replyEvent:)), forEventClass: AEEventClass(kInternetEventClass), andEventID: AEEventID(kAEGetURL))
     }
     
-    func receiveURLSchemes(event: NSAppleEventDescriptor?, replyEvent: NSAppleEventDescriptor?) {
+    @objc func receiveURLSchemes(event: NSAppleEventDescriptor?, replyEvent: NSAppleEventDescriptor?) {
         print("received.")
         if let urlStr = event?.paramDescriptor(forKeyword: AEKeyword(keyDirectObject))?.stringValue {
             if let url = NSURL(string: urlStr) {

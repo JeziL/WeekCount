@@ -28,7 +28,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
     
     var sem: Semester!
     
-    var statusItem = NSStatusBar.system().statusItem(withLength: NSVariableStatusItemLength)
+    var statusItem = NSStatusBar.system.statusItem(withLength: NSStatusItem.variableLength)
     
     override func awakeFromNib() {
         preferencesWindow = PreferencesWindow()
@@ -60,8 +60,8 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         quit()
     }
     
-    func quit() {
-        NSApplication.shared().terminate(self)
+    @objc func quit() {
+        NSApplication.shared.terminate(self)
     }
     
     func resetPreferences() {
@@ -69,7 +69,7 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
         updateAll()
     }
     
-    func updateAll() {
+    @objc func updateAll() {
         let formatter = DateFormatter()
         formatter.locale = NSLocale.autoupdatingCurrent
         formatter.dateStyle = .full
@@ -138,9 +138,9 @@ class StatusMenuController: NSObject, PreferencesWindowDelegate {
             var rawStr = displayFormat.replacingOccurrences(of: "{W}", with: String(count))
             rawStr = rawStr.replacingOccurrences(of: "{zhW}", with: convertToChinese(count: count))
             rawStr = iso8601Format(str: rawStr)
-            return NSAttributedString.init(string: rawStr, attributes: [NSFontAttributeName: font])
+            return NSAttributedString.init(string: rawStr, attributes: [NSAttributedStringKey.font: font])
         } else {
-            return NSAttributedString.init(string: "WeekCount", attributes: [NSFontAttributeName: font])
+            return NSAttributedString.init(string: "WeekCount", attributes: [NSAttributedStringKey.font: font])
         }
     }
 }

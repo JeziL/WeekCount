@@ -31,8 +31,8 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
     
     var delegate: PreferencesWindowDelegate?
     
-    override var windowNibName: String! {
-        return "PreferencesWindow"
+    override var windowNibName: NSNib.Name! {
+        return NSNib.Name.init("PreferencesWindow")
     }
     
     override func windowDidLoad() {
@@ -102,6 +102,6 @@ class PreferencesWindow: NSWindowController, NSWindowDelegate, NSTextFieldDelega
         } else if (lang.contains("zh-Hant")) {
             help = help_zht
         }
-        NSWorkspace.shared().open(help!);
+        NSWorkspace.shared.open(help!);
     }
 }

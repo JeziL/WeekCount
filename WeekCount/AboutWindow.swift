@@ -13,15 +13,15 @@ class AboutWindow: NSWindowController, NSWindowDelegate {
     @IBOutlet var versionLabel: NSTextField!
     
     @IBAction func gitHubButtonClicked(sender: NSButton) {
-        NSWorkspace.shared().open(URL(string: "https://github.com/JeziL/WeekCount")!)
+        NSWorkspace.shared.open(URL(string: "https://github.com/JeziL/WeekCount")!)
     }
     
     @IBAction func mailButtonClicked(sender: NSButton) {
-        NSWorkspace.shared().open(URL(string: "mailto:hi@wangjinli.com")!)
+        NSWorkspace.shared.open(URL(string: "mailto:hi@wangjinli.com")!)
     }
     
-    override var windowNibName: String! {
-        return "AboutWindow"
+    override var windowNibName: NSNib.Name! {
+        return NSNib.Name.init("AboutWindow")
     }
     
     override func windowDidLoad() {
