@@ -54,6 +54,10 @@
 
 ## Release Note
 
+- v1.3.2
+
+	- 添加 ⌘Q 退出快捷键。
+
 - v1.3.1
 	
 	- 将代码更新至 Swift 4 和 macOS 10.13 SDK。
